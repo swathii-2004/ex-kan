@@ -51,7 +51,7 @@ Chosen because the whole project is framed as a diagnostic test — SHAP/LIME is
 ### Interaction principle
 Every screen answers one question: *Analyze* = "what did you say?", *Result* = "can we trust why the model reacted?", *Dashboard* = "does that trust hold up at scale?", *History* = "has this been tested honestly and repeatedly?"
 
-**Prototype link(draft — not finalized, revisit after backend is working):** https://claude.ai/artifact/MgwfNSj752yPvyi8uhNsuN
+**Prototype link (draft — not finalized, revisit after backend is working):** https://claude.ai/artifact/MgwfNSj752yPvyi8uhNsuN
 
 ---
 
@@ -86,11 +86,14 @@ Every screen answers one question: *Analyze* = "what did you say?", *Result* = "
 - [x] ✅ Design UI/UX direction and build clickable prototype
 
 ### Phase 1 — Project Setup
-- [ ] ⏳ Create project folder structure (backend/, frontend/, model/, data/, notebooks/)
-- [ ] ⏳ Set up Python virtual environment; install transformers, torch, shap, lime, fastapi, scikit-learn, pandas
-- [ ] ⏳ Set up React + TypeScript app scaffold
-- [ ] ⏳ Initialize GitHub repo, connect to MongoDB instance
-- [ ] ⏳ Merge Shwetha's 240 net-new rows into bucketed data with proper source tagging (as discussed — do not blindly merge label systems)
+- [x] ✅ Create project folder structure (backend/, frontend/, model/, data/, notebooks/)
+- [x] ✅ Set up Python virtual environment; requirements.txt created (fastapi, uvicorn, transformers, torch, shap, lime, scikit-learn, pandas, pymongo, python-dotenv)
+- [x] ✅ Set up React + TypeScript app scaffold (Vite)
+- [x] ✅ Initialize GitHub repo (local commit created)
+- [x] ✅ Install full backend dependencies — `pip install -r requirements.txt` (verified in `backend/venv`: torch 2.14, transformers 5.17, shap 0.52, lime 0.2, plus fastapi/uvicorn/pandas/scikit-learn/pymongo/python-dotenv all installed)
+- [x] ✅ Push repo to GitHub remote (github.com/swathii-2004/ex-kan) — `origin` configured, local `HEAD` confirmed matching `origin/main`
+- [x] ✅ Set up MongoDB instance (Atlas free tier) and connect via `.env` — verified live: `/db-check` returns `{"database":"connected"}` against the real Atlas cluster (fixed by adding IP to Network Access List)
+- [ ] ⏳ Prepare Shwetha's 240 net-new rows as a SEPARATE validation file (NOT merged into training data) — tag source clearly, apply label mapping (Depressive→distress, Non-Depressive→not-distress, Neutral→exclude), save as `data/processed/validation_depression_labeled.csv`. Used only AFTER model training, to sanity-check whether the sentiment-proxy-trained model also correctly identifies genuinely depression-labeled text as distress. (Confirmed: no such file exists anywhere in the repo yet.)
 
 ### Phase 2 — Model Training
 - [ ] ⏳ Load and finalize bucketed dataset (train/val/test split within each bucket)
