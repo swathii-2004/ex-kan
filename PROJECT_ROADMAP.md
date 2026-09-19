@@ -79,7 +79,7 @@ Every screen answers one question: *Analyze* = "what did you say?", *Result* = "
 - [x] ✅ Literature review — confirm gap is unclaimed (Chowdhury & Bahari, Banerjee et al., etc.)
 - [x] ✅ Source and audit base dataset (DravidianCodeMix, ~7,655 rows)
 - [x] ✅ Fix code-mix bucketing method (script % + Romanized-Kannada detection)
-- [x] ✅ Final bucket counts confirmed: Low 3,472 / Medium 1,565 / High 2,614
+- [x] ✅ Final bucket counts confirmed: Low 3,696 / Medium 1,482 / High 2,458 (via `improved_bucketer.py`, Romanized-Kannada-aware `effective_score` method)
 - [x] ✅ Evaluate and reject unusable extra datasets (DOSA, Kaggle Romanized Reviews, offenseval_dravidian)
 - [x] ✅ Obtain secondary depression-labeled dataset (Shwetha & Pushpalatha) — 240 net-new rows
 - [x] ✅ Document sentiment-as-distress-proxy justification with real citations
