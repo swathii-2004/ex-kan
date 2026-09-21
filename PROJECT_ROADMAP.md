@@ -85,6 +85,8 @@ Every screen answers one question: *Analyze* = "what did you say?", *Result* = "
 - [x] ✅ Document sentiment-as-distress-proxy justification with real citations
 - [x] ✅ Design UI/UX direction and build clickable prototype
 
+> **Note — dataset contamination finding (2026-09-21):** Manual audit (n=19 Medium, n=28 High) found ~18-21% of Medium/High bucket rows contain non-Kannada contamination (English sentences mentioning "Kannada" as a topic, misspellings miscounted as Romanized Kannada, and Hindi-in-Latin-script indistinguishable from Romanized Kannada). This is a documented dataset limitation, to be reported in the paper's Limitations section, not a blocking issue for proceeding to model training.
+
 ### Phase 1 — Project Setup
 - [x] ✅ Create project folder structure (backend/, frontend/, model/, data/, notebooks/)
 - [x] ✅ Set up Python virtual environment; requirements.txt created (fastapi, uvicorn, transformers, torch, shap, lime, scikit-learn, pandas, pymongo, python-dotenv)
