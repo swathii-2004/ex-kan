@@ -192,3 +192,220 @@ Positive,love you ya,3,0.0,0.3333,0.3333,0.6667,0.6667,True,high,manual:pure_eng
 Mixed feelings,Odeya Kannada full movie,4,0.0,0.3333,0.3333,0.6667,0.6667,True,high,manual:pure_english
 Negative,Estella matadonu elli matadodkintta border ge hogi matado maraya,9,0.0,0.6667,0.6667,0.3333,0.6667,False,high,manual:monolingual_romanized_kannada
 Mixed feelings,Superb u r Kannada pandit yaar,6,0.0,0.4,0.4,0.6,0.8,False,high,manual:pure_english
+Mixed feelings,@s.g. mathapati k,3,0.0,0.6667,0.6667,0.3333,0.6667,True,high,"auto_prefilter:weak_signal(eng=0,kan=0)"
+Positive,Kayakave kailasa sir,3,0.0,0.6667,0.6667,0.3333,0.6667,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Negative,420 nan maga krishana,4,0.0,0.6667,0.6667,0.3333,0.6667,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Negative,Promotion chennag madilla,3,0.0,0.6667,0.6667,0.3333,0.6667,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Positive,Tiktok ben agbek bro,4,0.0,0.5,0.5,0.5,1.0,False,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Positive,Exhalant movie,2,0.0,0.5,0.5,0.5,1.0,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Positive,supper guruve liricys,3,0.0,0.6667,0.6667,0.3333,0.6667,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Positive,Vijaykumar s Kumsi  hotelnKumsi,4,0.0,0.6667,0.6667,0.3333,0.6667,True,high,"auto_prefilter:weak_signal(eng=0,kan=0)"
+Mixed feelings,ಬರೀ adds bartave.,3,0.3333,0.3333,0.6667,0.3333,0.6667,True,high,"auto_prefilter:weak_signal(eng=1,kan=1)"
+Positive,Kannadad nijvad hero,3,0.0,0.6667,0.6667,0.3333,0.6667,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Positive,Jai d boss appu,4,0.0,0.5,0.5,0.5,1.0,False,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Mixed feelings,Jai prajvalnJai d boss,4,0.0,0.5,0.5,0.5,1.0,False,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Positive,Super annna neevu,3,0.0,0.5,0.5,0.5,1.0,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Negative,Tik tok nan Shaaataaaaa,4,0.0,0.6667,0.6667,0.3333,0.6667,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Negative,Idhu bari bogus,3,0.0,0.6667,0.6667,0.3333,0.6667,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Positive,Jai d boss,3,0.0,0.3333,0.3333,0.6667,0.6667,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Positive,Music kelta erbekanisutade,3,0.0,0.6667,0.6667,0.3333,0.6667,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Negative,Unlike madiroru bevarsigalu.,3,0.0,0.6667,0.6667,0.3333,0.6667,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Mixed feelings,@sachin Mankar hu bro,4,0.0,0.6667,0.6667,0.3333,0.6667,True,high,"auto_prefilter:weak_signal(eng=0,kan=0)"
+Negative,TikTok nan shata,3,0.0,0.6667,0.6667,0.3333,0.6667,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Positive,sir nivu kottiguobbru,3,0.0,0.6667,0.6667,0.3333,0.6667,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Mixed feelings,Ulti music suuuper,3,0.0,0.5,0.5,0.5,1.0,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Negative,@AJITH S SHETTY yak uribeku.,5,0.0,0.5,0.5,0.5,1.0,False,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Negative,387 tusmika fans anstade,4,0.0,0.6667,0.6667,0.3333,0.6667,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Positive,Super pakka nodthini,3,0.0,0.6667,0.6667,0.3333,0.6667,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Negative,Nanu film nodilla,3,0.0,0.6667,0.6667,0.3333,0.6667,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Mixed feelings,Idonde voledagiradu 2020 li,4,0.0,0.6667,0.6667,0.3333,0.6667,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Mixed feelings,Pubge sontekorya kano,3,0.0,0.6667,0.6667,0.3333,0.6667,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Positive,Chindi bro .....,3,0.0,0.5,0.5,0.5,1.0,True,high,"auto_prefilter:weak_signal(eng=0,kan=0)"
+Positive,waw spr sir,3,0.0,0.6667,0.6667,0.3333,0.6667,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Positive,kannada tougari teppa,3,0.0,0.6667,0.6667,0.3333,0.6667,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Positive,Spr song,2,0.0,0.5,0.5,0.5,1.0,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Mixed feelings,Broo dhanushreena roast madiiii... Chenagirutthe,5,0.0,0.6667,0.6667,0.3333,0.6667,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Mixed feelings,I ammaddixctedrepeatrinserepeat guru,3,0.0,0.3333,0.3333,0.6667,0.6667,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Negative,totally nimmamman shaata,3,0.0,0.6667,0.6667,0.3333,0.6667,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Positive,ಸರ್ pls contact 9743436877,4,0.3333,0.0,0.3333,0.6667,0.6667,True,high,"auto_prefilter:weak_signal(eng=1,kan=1)"
+Positive,kannadadha abimani jai karnataka all tha best comeback,8,0.0,0.625,0.625,0.375,0.75,False,high,auto_prefilter:hindi_stopwords:tha
+Mixed feelings,I'm big kiccha&rakshith Shetti fanzz,5,0.0,0.5,0.5,0.5,1.0,False,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Mixed feelings,100 alla 200 million agutte,5,0.0,0.6667,0.6667,0.3333,0.6667,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Positive,RS haadugalella haagene bro,4,0.0,0.5,0.5,0.5,1.0,False,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Negative,@10 R le suvar gandu,5,0.0,0.5,0.5,0.5,1.0,False,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Mixed feelings,ಅಧ್ಬುತ .... BGM super..,4,0.5,0.0,0.5,0.5,1.0,True,high,"auto_prefilter:weak_signal(eng=1,kan=1)"
+Positive,Luv u rakshith Shetty sir,5,0.0,0.5,0.5,0.5,1.0,False,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Positive,Movie sakathage edi.. nodi...,4,0.0,0.6667,0.6667,0.3333,0.6667,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Mixed feelings,Yav game idu,3,0.0,0.6667,0.6667,0.3333,0.6667,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Mixed feelings,ayoo super annaaaa,3,0.0,0.5,0.5,0.5,1.0,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Positive,Super togari tippa,3,0.0,0.6667,0.6667,0.3333,0.6667,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Positive,Nijavaglu belakaythu Shankar sir,4,0.0,0.6667,0.6667,0.3333,0.6667,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Negative,Super  maga,2,0.0,0.5,0.5,0.5,1.0,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Positive,Super bro nivu,3,0.0,0.3333,0.3333,0.6667,0.6667,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Negative,@10 R hu bro name halmodakke,6,0.0,0.4,0.4,0.6,0.8,False,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Mixed feelings,@WIND MOTOUR ಹಸಿರುವಾಸಿ 🤣🤣🤣,4,0.5,0.0,0.5,0.5,1.0,True,high,"auto_prefilter:weak_signal(eng=1,kan=1)"
+Negative,100 million agalla BRO,4,0.0,0.5,0.5,0.5,1.0,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Mixed feelings,Rashmika fans bro,3,0.0,0.3333,0.3333,0.6667,0.6667,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Negative,Song maatra chindi,3,0.0,0.6667,0.6667,0.3333,0.6667,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Positive,Ashwathama. Vadhukkidhe.evathu. video. Nodithunanu. Jai. Babaji,6,0.0,0.5,0.5,0.5,1.0,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Mixed feelings,Wait madappa ...,3,0.0,0.5,0.5,0.5,1.0,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Positive,Chindhi guru.. Sakkath.,3,0.0,0.5,0.5,0.5,1.0,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Positive,Osm vedio anna,3,0.0,0.6667,0.6667,0.3333,0.6667,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Positive,Asom song Vijaya prkasha,4,0.0,0.6667,0.6667,0.3333,0.6667,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Negative,@Lalkrishna S  ಹೋಲಿತೀಯಾ,3,0.3333,0.3333,0.6667,0.3333,0.6667,True,high,"auto_prefilter:weak_signal(eng=0,kan=1)"
+Positive,Yenu tappilla guru ...,4,0.0,0.6667,0.6667,0.3333,0.6667,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Positive,Bro nivu super,3,0.0,0.3333,0.3333,0.6667,0.6667,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Negative,Rip dislikers,2,0.0,0.5,0.5,0.5,1.0,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Negative,Super bro ujji innu ujji,5,0.0,0.6,0.6,0.4,0.8,False,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Positive,Simple stara supera,3,0.0,0.6667,0.6667,0.3333,0.6667,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Negative,Lo hucch baddimagne,3,0.0,0.6667,0.6667,0.3333,0.6667,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Positive,Super agi mathadthiya bro,4,0.0,0.5,0.5,0.5,1.0,False,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Mixed feelings,2.7k rashmika fans,3,0.0,0.5,0.5,0.5,1.0,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Positive,Bro super nive,3,0.0,0.3333,0.3333,0.6667,0.6667,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Negative,Tik tok ban,3,0.0,0.6667,0.6667,0.3333,0.6667,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Positive,Gud pair Praju & Nishvika..,5,0.0,0.5,0.5,0.5,1.0,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Positive,Idu talent ..,3,0.0,0.5,0.5,0.5,1.0,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Negative,@VARAPRASAD K K neen tunne chipake kayak illa,8,0.0,0.625,0.625,0.375,0.75,False,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Positive,Chindi chithrannaaa guru,3,0.0,0.5,0.5,0.5,1.0,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Positive,Ban tik tok,3,0.0,0.6667,0.6667,0.3333,0.6667,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Positive,Bro super neevu,3,0.0,0.3333,0.3333,0.6667,0.6667,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Positive,Shetre song soooooper,3,0.0,0.5,0.5,0.5,1.0,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Negative,Hugi guru badethawke,3,0.0,0.6667,0.6667,0.3333,0.6667,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Positive,Bro kanditha madona,3,0.0,0.6667,0.6667,0.3333,0.6667,True,high,"auto_prefilter:weak_signal(eng=0,kan=0)"
+Positive,thogari tippa super,3,0.0,0.6667,0.6667,0.3333,0.6667,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Positive,boss osm,2,0.0,0.5,0.5,0.5,1.0,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Positive,Bro neenu Heludhu Sarine,4,0.0,0.5,0.5,0.5,1.0,True,high,"auto_prefilter:weak_signal(eng=0,kan=0)"
+Mixed feelings,Gentleman nodi bro,3,0.0,0.3333,0.3333,0.6667,0.6667,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Mixed feelings,Actually idu chenagirodu,3,0.0,0.6667,0.6667,0.3333,0.6667,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Mixed feelings,Jonny andre Jayarama irbahuda??,4,0.0,0.6667,0.6667,0.3333,0.6667,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Positive,Superb bro nivu,3,0.0,0.3333,0.3333,0.6667,0.6667,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Positive,Next kgf........ avane srimannarayana.... blockkkkkkk busterrrrrr,6,0.0,0.5,0.5,0.5,1.0,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Positive,Supar guru chindi,3,0.0,0.6667,0.6667,0.3333,0.6667,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Positive,Kannada chitrarangada HEMME,3,0.0,0.5,0.5,0.5,1.0,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Mixed feelings,Tyrion Lannister spotted 3,4,0.0,0.5,0.5,0.5,1.0,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Negative,Enayya Neel acting yapppa,4,0.0,0.5,0.5,0.5,1.0,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Positive,jai d boss,3,0.0,0.3333,0.3333,0.6667,0.6667,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Positive,super togari tippa,3,0.0,0.6667,0.6667,0.3333,0.6667,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Positive,Vijay parkash sir🤩,3,0.0,0.6667,0.6667,0.3333,0.6667,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Negative,Bhai Main Kabhi Aisa video Nahi Dekha Kisi movie mein,10,0.0,0.5,0.5,0.5,1.0,False,high,auto_prefilter:hindi_stopwords:nahi
+Positive,Egu edare sir,3,0.0,0.6667,0.6667,0.3333,0.6667,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Positive,Jai d boss,3,0.0,0.3333,0.3333,0.6667,0.6667,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Positive,Super togari tippa,3,0.0,0.6667,0.6667,0.3333,0.6667,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Positive,super togari tippa,3,0.0,0.6667,0.6667,0.3333,0.6667,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Positive,Bro nivu  supara,3,0.0,0.6667,0.6667,0.3333,0.6667,True,high,"auto_prefilter:weak_signal(eng=0,kan=0)"
+Positive,Jai D Boss,3,0.0,0.5,0.5,0.5,1.0,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Positive,Supar anna supar,3,0.0,0.6667,0.6667,0.3333,0.6667,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Positive,Super bro nSakattag helidri,4,0.0,0.5,0.5,0.5,1.0,False,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Positive,Spr song,2,0.0,0.5,0.5,0.5,1.0,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Negative,Haha. Nin movie nodilla. 🤣🤣🤣,5,0.0,0.6667,0.6667,0.3333,0.6667,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Positive,BGM is Superbb,3,0.0,0.5,0.5,0.5,1.0,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Positive,Super nataka Togari Tippa.,4,0.0,0.5,0.5,0.5,1.0,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Positive,Supar sir nevu,3,0.0,0.6667,0.6667,0.3333,0.6667,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Negative,Dislike madiroru pakka Rashmikha Kadeyavare,5,0.0,0.6667,0.6667,0.3333,0.6667,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Positive,Anna canagi helidira,3,0.0,0.6667,0.6667,0.3333,0.6667,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Positive,Entaha adbhutava movie,3,0.0,0.6667,0.6667,0.3333,0.6667,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Positive,Ultimate  movi,2,0.0,0.5,0.5,0.5,1.0,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Positive,Rakshit shetty superb,3,0.0,0.6667,0.6667,0.3333,0.6667,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Negative,Promotion chennagi nadtilla,3,0.0,0.6667,0.6667,0.3333,0.6667,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Positive,Togari teeppa super,3,0.0,0.6667,0.6667,0.3333,0.6667,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Positive,super togari tippa,3,0.0,0.6667,0.6667,0.3333,0.6667,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Positive,Thumba chanegide sir,3,0.0,0.6667,0.6667,0.3333,0.6667,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Positive,Bro super bro allarigu artha agothara  alidira,7,0.0,0.5714,0.5714,0.4286,0.8571,False,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Positive,Spoon beesidava Rishab Shetty,4,0.0,0.5,0.5,0.5,1.0,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Positive,Jai appu sir,3,0.0,0.6667,0.6667,0.3333,0.6667,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Positive,Pakka hit aguthee,3,0.0,0.6667,0.6667,0.3333,0.6667,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Negative,Bgm is chindi,3,0.0,0.6667,0.6667,0.3333,0.6667,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Positive,Benki anna Benki,3,0.0,0.5,0.5,0.5,1.0,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Positive,Adi and dia,3,0.0,0.6667,0.6667,0.3333,0.6667,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Positive,bro troll sakkattagi madtira...,4,0.0,0.3333,0.3333,0.6667,0.6667,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Mixed feelings,Yenu!¿ Taayganda na neenu? !!,5,0.0,0.6667,0.6667,0.3333,0.6667,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Positive,ಸೂಪರ್ u r a carrect,5,0.2,0.2,0.4,0.6,0.8,False,high,"auto_prefilter:weak_signal(eng=0,kan=1)"
+Positive,Super togari tippa,3,0.0,0.6667,0.6667,0.3333,0.6667,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Positive,Super vodis soing,3,0.0,0.6667,0.6667,0.3333,0.6667,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Positive,ban tik tok,3,0.0,0.6667,0.6667,0.3333,0.6667,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Mixed feelings,Game yavadu bro adu,4,0.0,0.5,0.5,0.5,1.0,False,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Mixed feelings,Hindi kuthe aahe,3,0.0,0.6667,0.6667,0.3333,0.6667,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Positive,Wow .... diya soop.,4,0.0,0.6667,0.6667,0.3333,0.6667,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Mixed feelings,kelsa maddidare anna Modiji,4,0.0,0.6667,0.6667,0.3333,0.6667,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Negative,Sexyyy song nHindi elroooo,4,0.0,0.5,0.5,0.5,1.0,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Positive,Jai D Boss,3,0.0,0.5,0.5,0.5,1.0,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Positive,S bro Niv helid nija,5,0.0,0.5,0.5,0.5,1.0,False,high,"auto_prefilter:weak_signal(eng=0,kan=0)"
+Positive,Salaam racky bhai,3,0.0,0.6667,0.6667,0.3333,0.6667,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Positive,super togari tippa,3,0.0,0.6667,0.6667,0.3333,0.6667,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Positive,100 days pakka,3,0.0,0.5,0.5,0.5,1.0,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Mixed feelings,Huccha Venkat dialogue,3,0.0,0.5,0.5,0.5,1.0,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Positive,Super  maga,2,0.0,0.5,0.5,0.5,1.0,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Positive,chindu guru ninu,3,0.0,0.6667,0.6667,0.3333,0.6667,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Positive,Luv from karnataka,3,0.0,0.6667,0.6667,0.3333,0.6667,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Positive,Jai D BoSs,3,0.0,0.3333,0.3333,0.6667,0.6667,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Positive,Hai Neel (prithvi) wonderful movie dia,6,0.0,0.6,0.6,0.4,0.8,False,high,auto_prefilter:hindi_stopwords:hai
+Negative,@sᴀɴᴅᴀʟᴡᴏᴏᴅ sᴛᴜᴅɪᴏ ᴍᴏᴠɪᴇs neen huttidh yav kuttige,7,0.0,0.5714,0.5714,0.4286,0.8571,False,high,"auto_prefilter:weak_signal(eng=0,kan=0)"
+Positive,nice togari tippa,3,0.0,0.6667,0.6667,0.3333,0.6667,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Negative,Swag karenge sabka swagath...ek tha tiger  song copied music?,9,0.0,0.375,0.375,0.625,0.75,False,high,auto_prefilter:hindi_stopwords:tha
+Positive,Suspen movie prajaval,3,0.0,0.6667,0.6667,0.3333,0.6667,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Negative,RIP rashmika mandhana,3,0.0,0.6667,0.6667,0.3333,0.6667,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Mixed feelings,Pung ban madi pls,4,0.0,0.5,0.5,0.5,1.0,False,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Negative,Found 806 rashmika mangannas....,4,0.0,0.5,0.5,0.5,1.0,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Mixed feelings,Siri song bro,3,0.0,0.3333,0.3333,0.6667,0.6667,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Positive,Jai D Boss,3,0.0,0.5,0.5,0.5,1.0,True,high,"auto_prefilter:weak_signal(eng=1,kan=0)"
+Negative,Vishal movie remake,3,0.0,0.3333,0.3333,0.6667,0.6667,True,high,manual:pure_english
+Positive,ಪ್ರಜ್ವಲ್ ದೇವರಾಜ್ sir is  back,5,0.4,0.0,0.4,0.6,0.8,False,high,manual:pure_english
+Positive,ಸೂಪರ್... ಜಂಟಲ್ ಮ್ಯಾನ್..... All the best,6,0.6,0.0,0.6,0.4,0.8,False,high,manual:pure_english
+Positive,SuuuuuuuupeeeeeerrrrrrnFull roast for tiktoker's,4,0.0,0.3333,0.3333,0.6667,0.6667,True,high,manual:pure_english
+Negative,Copy from vivek bindra,4,0.0,0.5,0.5,0.5,1.0,False,high,manual:pure_english
+Positive,all India kicha sudeep fanz like,6,0.0,0.6,0.6,0.4,0.8,False,high,manual:pure_english
+Positive,Super duper song,3,0.0,0.3333,0.3333,0.6667,0.6667,True,high,manual:pure_english
+Mixed feelings,@s s Islam ಎಲ್ಲ ದೇಶಗಳಿಗೂ ಮಾರಕ .,7,0.6,0.0,0.6,0.4,0.8,False,high,manual:pure_kannada_script
+Positive,Love from karnataka,3,0.0,0.3333,0.3333,0.6667,0.6667,True,high,manual:pure_english
+Positive,Jai Kannada Jai india,4,0.0,0.5,0.5,0.5,1.0,True,high,manual:weak_evidence
+Negative,Super rakshit shetty sir stayl  l like,7,0.0,0.4286,0.4286,0.5714,0.8571,False,high,manual:pure_english
+Positive,Yuvaratnaa coming soon,3,0.0,0.3333,0.3333,0.6667,0.6667,True,high,manual:pure_english
+Mixed feelings,Shetru always different,3,0.0,0.3333,0.3333,0.6667,0.6667,True,high,manual:pure_english
+Negative,ha nam manegu bandiida ...,5,0.0,0.5,0.5,0.5,1.0,False,high,manual:monolingual_romanized_kannada
+Positive,Aadk guru nan nimana gurugalu anodu,6,0.0,0.6667,0.6667,0.3333,0.6667,False,high,manual:monolingual_romanized_kannada
+Positive,Nimn Tarah Manisha Samaj ke Bhag you are great,9,0.0,0.4,0.4,0.6,0.8,False,high,manual:hindi_contamination
+Positive,Diya is super ....movie,4,0.0,0.3333,0.3333,0.6667,0.6667,True,high,manual:pure_english
+Mixed feelings,slum dialogue pogaru,3,0.0,0.3333,0.3333,0.6667,0.6667,True,high,manual:pure_english
+Mixed feelings,Vijay prkash singing in super song nSinging  Vijay prakash sir,10,0.0,0.4444,0.4444,0.5556,0.8889,False,high,manual:pure_english
+Positive,Suaprb movie Re release plzzzz,5,0.0,0.3333,0.3333,0.6667,0.6667,True,high,manual:pure_english
+Negative,China avru nan shata,4,0.0,0.5,0.5,0.5,1.0,False,high,manual:monolingual_romanized_kannada
+Positive,Yen sakkathagi helidri guru,4,0.0,0.5,0.5,0.5,1.0,False,high,manual:monolingual_romanized_kannada
+Positive,Vijay prakash  voice is super,5,0.0,0.4,0.4,0.6,0.8,False,high,manual:pure_english
+Negative,Le gandu nan magane,4,0.0,0.5,0.5,0.5,1.0,False,high,manual:monolingual_romanized_kannada
+Positive,All the best fro ಡಿ ಬಾಸ್ ಫ್ಯಾನ್ಸ್,7,0.4286,0.0,0.4286,0.5714,0.8571,False,high,manual:pure_english
+Positive,Hindi ..Kannada ..haadugala hatrakkku barukke sadhyene illa,7,0.0,0.6667,0.6667,0.3333,0.6667,False,high,manual:monolingual_romanized_kannada
+Positive,Best song  sooper,3,0.0,0.3333,0.3333,0.6667,0.6667,True,high,manual:pure_english
+Positive,Is ashvadhama alive,3,0.0,0.3333,0.3333,0.6667,0.6667,True,high,manual:pure_english
+Positive,Ella kannada abhimanigalu kelebekada hasya chataki,6,0.0,0.6667,0.6667,0.3333,0.6667,False,high,manual:monolingual_romanized_kannada
+Positive,Tq from karnataka kiccha sudeep fans 🥰🥰🥰🥰🥰🤙🤩🤩,7,0.0,0.6667,0.6667,0.3333,0.6667,False,high,manual:pure_english
+Mixed feelings,Nani kannd full movie,4,0.0,0.5,0.5,0.5,1.0,False,high,manual:pure_english
+Positive,I feel this vijay prakash singing tune same as kotigobba kotigobba,11,0.0,0.3636,0.3636,0.6364,0.7273,False,high,manual:pure_english
+Mixed feelings,Bokka d boss ke. D boss andre druva boss onde.,10,0.0,0.4,0.4,0.6,0.8,False,high,manual:monolingual_romanized_kannada
+Positive,Fan from ugandaa,3,0.0,0.3333,0.3333,0.6667,0.6667,True,high,manual:pure_english
+Positive,Hands up  ರಕ್ಷಿತ್ ಶೆಟ್ಟಿ fans,5,0.4,0.0,0.4,0.6,0.8,False,high,manual:pure_english
+Mixed feelings,Jai modiji for tik tok ban 🥰🥰🥰,7,0.0,0.6667,0.6667,0.3333,0.6667,False,high,manual:pure_english
+Positive,Nice story accting super prajval devraaj,6,0.0,0.5,0.5,0.5,1.0,False,high,manual:pure_english
+Positive,Superb rakshit sir sobg superb macking,6,0.0,0.5,0.5,0.5,1.0,False,high,manual:pure_english
+Positive,Super Jai D.Boss,3,0.0,0.5,0.5,0.5,1.0,True,high,manual:weak_evidence
+Negative,Ha mundalochane matte dooradrusti .....avarahage ide ....,7,0.0,0.4,0.4,0.6,0.8,False,high,manual:monolingual_romanized_kannada
+Positive,children's Dan's aha jumtaka jum jum,6,0.0,0.6,0.6,0.4,0.8,False,high,manual:weak_evidence
+Mixed feelings,Sir make vidieo on drone prathap,6,0.0,0.3333,0.3333,0.6667,0.6667,False,high,manual:pure_english
+Positive,Song full gicchi gili gili.....,5,0.0,0.5,0.5,0.5,1.0,False,high,manual:weak_evidence
+Negative,Illa guru.. Ashwatama na.. Bhaashe ivrige. Barutte ansutte....,8,0.0,0.5,0.5,0.5,1.0,False,high,manual:monolingual_romanized_kannada
+Negative,Dislikers are not real kannadigas,5,0.0,0.4,0.4,0.6,0.8,False,high,manual:pure_english
+Negative,Dislikers Are rashmika fans maybe,5,0.0,0.5,0.5,0.5,1.0,False,high,manual:pure_english
+Negative,Kannada ne barolla,3,0.0,0.3333,0.3333,0.6667,0.6667,True,high,manual:monolingual_romanized_kannada
+Negative,Nam mane gu bandida,4,0.0,0.5,0.5,0.5,1.0,False,high,manual:monolingual_romanized_kannada
+Positive,Super song Jai DBoss,4,0.0,0.3333,0.3333,0.6667,0.6667,True,high,manual:weak_evidence
+Positive,ಕನ್ನಡ is super,3,0.3333,0.0,0.3333,0.6667,0.6667,True,high,manual:pure_english
+Positive,What a Song. #avanesrimannarayana,4,0.0,0.3333,0.3333,0.6667,0.6667,True,high,manual:pure_english
+Mixed feelings,@Syed Akbar yes bro,4,0.0,0.3333,0.3333,0.6667,0.6667,True,high,manual:pure_english
+Negative,Guru ashwattama na jote Avr Appa kuda bandidru nam urge gottilvaa nimge Krishna kuda sikkiddaa,15,0.0,0.6667,0.6667,0.3333,0.6667,False,high,manual:monolingual_romanized_kannada
+Positive,Karavali king Rakshith Shetty fans frm Uttara kannada,8,0.0,0.4,0.4,0.6,0.8,False,high,manual:pure_english
+Positive,Super duper hit,3,0.0,0.3333,0.3333,0.6667,0.6667,True,high,manual:pure_english
+Positive,Est sari kelidrunu kelbek anusutte,5,0.0,0.6,0.6,0.4,0.8,False,high,manual:monolingual_romanized_kannada
+Positive,My fevareta song,3,0.0,0.3333,0.3333,0.6667,0.6667,True,high,manual:pure_english
+Positive,Spr hero raksitsetty sir,4,0.0,0.5,0.5,0.5,1.0,False,high,manual:pure_english
+Positive,tq super sir,3,0.0,0.3333,0.3333,0.6667,0.6667,True,high,manual:pure_english
+Positive,Hands up avathara,3,0.0,0.3333,0.3333,0.6667,0.6667,True,high,manual:weak_evidence
+Positive,Di(A)di nHuge fan from nTamilnadu,5,0.0,0.6,0.6,0.4,0.8,False,high,manual:pure_english
