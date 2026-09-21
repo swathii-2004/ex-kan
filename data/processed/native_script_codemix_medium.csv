@@ -1,0 +1,62 @@
+label,text,n_tokens,kannada_script_pct,romanized_kannada_pct,kannada_language_pct,english_pct,effective_score,low_confidence,bucket,reject_reason
+Positive,Last  ತನಕ ನಕ್ಕಿ ನಕ್ಕಿ ಹೊಟ್ಟೆ ನೋವು ಬಂತು,7,0.8571,0.0,0.8571,0.1429,0.2857,False,medium,manual:pure_kannada_script
+Positive,ಉತ್ತರ ಕನ್ನಡದ ಹೆಮ್ಮೆ ಯ ನಟ್ and ನಮ್ಮ ಮೆಚ್ಚಿನ,8,0.875,0.0,0.875,0.125,0.25,False,medium,manual:pure_kannada_script
+Negative,ನಾನು ಇವತ್ತು ಫಿಲ್ಮ್ ನೋಡಿದೆ..ಸೂಪರ್nಸ್ವಲ್ಪ ಸಮಯ ಜಾಸ್ತಿ ಇದೆ...ಆದ್ರೆ..ಗೊತ್ತೇ ಆಗಲ್ಲ...ಯಾವಾಗ ನೀವು watch ನೋಡ್ತಿರೋ ಅವಾಗ ಟೈಂ ನೋಡ್ತಿರೋ...ಆಗ lag ಅಂತ ಅನಿಸ್ತಾದೆ...ಇಲ್ಲಾಂದ್ರೆ 3 hours ಹೋಗೋಡೆ ಗೊತ್ತೇ ಆಗಲ್ಲ,22,0.8571,0.0,0.8571,0.1429,0.2857,False,medium,manual:pure_kannada_script
+Negative,ಸರಿಯಾದ planning ಇರಬೇಕು. ನಮ್ಮ ರಾಜ್ಯದವರು  Business ನಲ್ಲಿ improve ಆಗ್ಬೇಕು.,9,0.75,0.0,0.75,0.25,0.5,False,medium,manual:pure_kannada_script
+Positive,So called ದೊಡ್ಡ ದೊಡ್ಡ ಸ್ಟಾರ್ ನಟರು ಇಂತಹ ಚಿತ್ರಗಳ ಬಗ್ಗೆನೂ ಸ್ವಲ್ಪ ಗಮನ ಕೊಟ್ರೆ ಕನ್ನಡ ಚಿತ್ರೋದ್ಯಮ ಒಳ್ಳೆಯ ಎತ್ತರಕ್ಕೆ ಬೆಳೆಯುತ್ತೆ,17,0.8824,0.0,0.8824,0.1176,0.2353,False,medium,manual:pure_kannada_script
+Mixed feelings,ನಂಗೆ ತುಂಬಾ ಬೇಜರಾಯಿತು ಒಂದು ಒಳ್ಳೆ ಸಿನಿಮಾ ಮಿಸ್ ಮಾಡ್ಕೊಂಡೆ ಅಂತ theater li ನೋಡಬೇಕಿತ್ತು.nI feel guilty,14,0.7143,0.0,0.7143,0.2857,0.5714,False,medium,manual:pure_kannada_script
+Positive,ಶ್ರೀ ಮನ್ ನಾರಾಯಣ  movie ಹಾಡು  ಕೇಳಲು  ಸುಮಧುರ...... ಡ್ಯಾನ್ಸ್  ಸೂಪರ್....   ಇದೆ,10,0.9,0.0,0.9,0.1,0.2,False,medium,manual:pure_kannada_script
+Positive,ಪ್ರಾಣಿಯ ಶಿಕಾರಿ ಅಲ್ಲ ಅಂತ ತಿಳಿಯುತ್ತೆ.. ಯಾವ ಶಿಕಾರಿ.. ಕಾದು ನೋಡಬೇಕಾಗಿದೆ superb trailer..,11,0.8182,0.0,0.8182,0.1818,0.3636,False,medium,manual:pure_kannada_script
+Positive,Your are great man ದೇವರು ಚೇನಗೀ.ಇಟ್ಟಿರಿಲ್ಲಿ wonder full man,9,0.2222,0.0,0.2222,0.7778,0.4444,False,medium,manual:pure_kannada_script
+Positive,ನಿಜವಾದ ಹೀರೋ ನೀವು sir ಸ್ವಾಭಿಮಾನದ ಗುರು ನೀವು,7,0.8571,0.0,0.8571,0.1429,0.2857,False,medium,manual:pure_kannada_script
+Positive,ಅಣ್ಣ ಸರಿಯಾಗಿ ಹೇಳ್ದೆ .. super.,5,0.75,0.0,0.75,0.25,0.5,False,medium,manual:pure_kannada_script
+Positive,ಕಾಯಕವೇ ಕೈಲಾಸ ಎಂಬ ತತ್ವವನ್ನು ಪಾಲಿಸುತ್ತಿರುವ ಕಲಿಯುಗದ ಮನುಷ್ಯ ಮತ್ತು sir ನಾನು ನಿಮ್ಮ ತಂದೆ k s ಅಶ್ವತ್ಥ್ ಸರ್ ಅವರ ಅಭಿಮಾನಿ,18,0.8333,0.0,0.8333,0.1667,0.3333,False,medium,manual:pure_kannada_script
+Negative,OMG ಟಿಕ್ ಟಾಕ್ ನಿಂದ nಚೈನಾದ ಬೋ* ಮ* 7,8,0.8571,0.0,0.8571,0.1429,0.2857,False,medium,manual:pure_kannada_script
+Mixed feelings,ಮೋಸ ಮಾಡಿ ಹೋಗುವ ಹುಡುಗಿರಿಗೆ ಇದೇ ತರ ಬುದ್ದಿ ಕಲಿಸಬೇಕು .....#Rakshithsheety come back ....,12,0.8,0.0,0.8,0.2,0.4,False,medium,manual:pure_kannada_script
+Positive,ಒಳ್ಳೆ ಕನ್ನಡ ಸಿನಿಮಾಗಳಿಗೆ ಯಾವಾಗ್ಲೂ ಸಪೋರ್ಟ್ ಮಾಡೋ fans ಕಡೆಯಿಂದ,8,0.875,0.0,0.875,0.125,0.25,False,medium,manual:pure_kannada_script
+Positive,ಬಂದ ಬಂದ ಅವನೇ ಶ್ರೀಮನ್ನಾರಾಯಣnHands up,5,0.8,0.0,0.8,0.2,0.4,False,medium,manual:pure_kannada_script
+Negative,ಪಾಪ ಜಾಸ್ತಿ followers ಇರೋರ್ ತುಂಬಾ ಬೇಜಾರ್ ಮಾಡ್ಕೊಂಡಿದಾರೆ,7,0.8571,0.0,0.8571,0.1429,0.2857,False,medium,manual:pure_kannada_script
+Negative,ಹಂದಿಗಳ್ಯಾಕೆ youtube use ಮಾಡ್ತಿವೆ.....ndislike ಕೂಡ ಮಾಡ್ತಿವೆ..nnಇಂಥ ಸಾಂಗ್ dislike ಮಾಡೋರಿಗೆ ಎನ್ ಅನ್ಬೇಕು....,11,0.7273,0.0,0.7273,0.2727,0.5455,False,medium,manual:pure_kannada_script
+Positive,Different ಮ್ಯೂಸಿಕ್ ಸರ್.nಅಜನಿಶ್ ಸರ್ ಗೆ ಧನ್ಯವಾದಗಳು..,6,0.8333,0.0,0.8333,0.1667,0.3333,False,medium,manual:pure_kannada_script
+Mixed feelings,ಸರ್ ದಯವಿಟ್ಟು Red FM ನಲ್ಲಿ  ನಿಮ್ಮ ಹೆಸರು ಏನಿತ್ತು ಹೇಳಿ....ನಾನು Red FM ಯಾವತ್ತೂ ಕೇಳ್ತೀನಿ....n ನಾಗರಾಜ್ or ವರುಣ್ ???n    Pls Admin let me know....,22,0.7857,0.0,0.7857,0.2143,0.4286,False,medium,manual:pure_kannada_script
+Negative,China apps ಯಾಕೆ ಬ್ಯಾನ್ ಮಾಡಬೇಕು ಅಂತ ಹೇಳುವವರಿಗೆ  ಚಪ್ಪಲಿಯಲ್ಲಿ ಹೋಡೆದು ಬುದ್ಧಿ ಕಲಿಸಬೇಕು .,12,0.8182,0.0,0.8182,0.1818,0.3636,False,medium,manual:pure_kannada_script
+Positive,ನಮ್ hero record ಅಷ್ಟು nನಮ್ hero record ಇಷ್ಟು ಅಂತ  ಕೆಲವೊಂದಿಷ್ಟು fans ಬಡಿದಾಡ್ತಿದ್ರೆnಅಲ್ಲೋಬ್ಬ ಎಲ್ಲ fans ಗಳನ್ನು ಒಗ್ಗೂಡಿಸಿ ತನ್ನೆಡೆಗೆ ಸೆಳೆಯುವಂತೆ ಮಾಡಿ ತನ್ನದೇ ಛಾಪು ಮೂಡಿಸಿದ nಯಾರವನು!?nnnnnnಅವನೇ ಶ್ರೀಮನ್ ನಾರಾಯಣ,25,0.76,0.0,0.76,0.24,0.48,False,medium,manual:pure_kannada_script
+Positive,Actually ಇದು ಇದು song  ಅಂದ್ರೆ...🤘🤘 ಏನಂತೀರಿ ಗೆಳಯರೆ.,7,0.7143,0.0,0.7143,0.2857,0.5714,False,medium,manual:pure_kannada_script
+Positive,Sir ನಿಮ್ಮ ಮಾತು 100 ಕ್ಕೆ ೧೦೦% ಸತ್ಯ..,7,0.8333,0.0,0.8333,0.1667,0.3333,False,medium,manual:pure_kannada_script
+Positive,super songnಜೈ ಕರ್ನಾಟಕ ಜೈ ಕನ್ನಡ,5,0.8,0.0,0.8,0.2,0.4,False,medium,manual:pure_kannada_script
+Positive,ರಾಕಿಂಗ್ ಸ್ಟಾರ್ ಯಶ್ ಅಭಿಮಾನಿಗಳ ಕಡೆ ಇಂದ...... Best wishes🤗,8,0.8571,0.0,0.8571,0.1429,0.2857,False,medium,manual:pure_kannada_script
+Mixed feelings,ಸೂಪರ್ n.. ಮಠ ಸರ್ ದಾಡಿ ಬ್ಲಾಕ್ ಮಾಡಿರೋದು ಖುಷಿ ತಂದಿದೆ,9,0.8889,0.0,0.8889,0.1111,0.2222,False,medium,manual:pure_kannada_script
+Positive,Demand ಈರುಳ್ಳಿಗೆ ಬಿಟ್ರೆnNEXTnನಮ್ಮ ASN ನಾ ಹಿಂದಿಯಲ್ಲಿ promote ಮಾಡಿ ಅನ್ನುವವರೆ ಹೆಚ್ಚು,10,0.7778,0.0,0.7778,0.2222,0.4444,False,medium,manual:pure_kannada_script
+Negative,@Reginald Kelly ಲೆ ತುಕಾಲಿ ನಿನ್ನ ಸಂಸ್ಕೃತಿ ತೋರಿಸುತ್ತೆ ನಿನ್ನ ಎಷ್ಟು ಕಚಡ ಅಂತ,11,0.9,0.0,0.9,0.1,0.2,False,medium,manual:pure_kannada_script
+Positive,ಇದು ಕನ್ನಡ ಚಿತ್ರರಂಗದ ಚರಿತ್ರೆ ಸೃಟಿಸೂ ಅವತಾರ ಯಾರ್ ಅವನು .......... (ಅವನೇ ಶ್ರೀಮನಾರಾಯಣ) All The Best D B055 fan,17,0.8333,0.0,0.8333,0.1667,0.3333,False,medium,manual:pure_kannada_script
+Positive,Superb songnದೀಪಣ್ಣನ ಅಭಿಮಾನಗಳ ಕಡೆಯಿಂದ ರಕ್ಷಿತ ಶೆಟ್ಟಿಯವರಿಗೆ ಶುಭವಾಗಲಿ....,7,0.8571,0.0,0.8571,0.1429,0.2857,False,medium,manual:pure_kannada_script
+Negative,Brazil ಕಂಪನಿ ಬಂದು 4 ವರ್ಷಕ್ಕೆ  ಬಾಗ್ಲು  ಮುಚ್ಚುತು  ಕಾರಣ ಲೋಕಲ್ accountant ಎರಡು ಕೈ ಯಿಂದ ತಿಂದ,14,0.8462,0.0,0.8462,0.1538,0.3077,False,medium,manual:pure_kannada_script
+Positive,ತನ್ನ ಉತ್ತಮ ಗುಣಮಟ್ಟವನ್ನು ಸಾಬೀತು ಮಾಡುತ್ತಾ ಮುಂದೆ ಸಾಗುತ್ತಿದೆ... We love you  #ಮಸ್ತಮಗಾ team🤩,12,0.7273,0.0,0.7273,0.2727,0.5455,False,medium,manual:pure_kannada_script
+Positive,ಏನ್ ಮ್ಯೂಸಿಕ್ ಕೊಟ್ಟೀದಿಯ ಗುರು..nI'm surrender ಟು ಲಿರಿಕ್ಸ,7,0.8571,0.0,0.8571,0.1429,0.2857,False,medium,manual:pure_kannada_script
+Negative,@Ŕävîñđŕå_02_GøWđřú ನಿಮ್ಮ ಅಂತಾ ಅರ್ಧ ಬರ್ದ ಫ್ಯಾನ್ ಅವಶ್ಯಕತೆ ನಮ್ boss ge ಬೇಡ ಹೋಗೋಲೆ ಲೌಡೆ ಷಂಡ,14,0.8462,0.0,0.8462,0.1538,0.3077,False,medium,manual:pure_kannada_script
+Positive,ನನ್ನ ಗೆಲ್ಲೋದು ಊಹೆಗೂ ಮೀರಿದ ಸಾಹಸnOsm line,6,0.8333,0.0,0.8333,0.1667,0.3333,False,medium,manual:pure_kannada_script
+Positive,ಆಶಿಕ ಸುಮ್ನೆ ನೀವೇ ಮದುವೆ ಆಗಿ ರಕ್ಷಿತ್ ಶೆಟ್ಟಿ ಅವರಿಗೆ .... ಜೋಡಿ ತುಂಬಾ ಚೆನ್ನಾಗಿರುತ್ತೆ....nnIn beauty you >>>>>>>>>>•••• Rashmika,16,0.8462,0.0,0.8462,0.1538,0.3077,False,medium,manual:pure_kannada_script
+Negative,@king k ....ಎಲ್ಲಾ ರಾಜಕಾರಣಿಗಳು ಕಳ್ಳರೆ.... ಇದ್ದುದರಲ್ಲಿ ಬಿಜೆಪಿ ಯವರು ಕಡಿಮೆ ಕಳ್ಳರು....,10,0.8,0.0,0.8,0.2,0.4,False,medium,manual:pure_kannada_script
+Mixed feelings,ನಿನ್ ಅಡ್ತಿರೋ pubge ನು ಚೈನ ದೆ ಅದನ್ನು uninstall madu,9,0.6667,0.2222,0.8889,0.1111,0.2222,False,medium,manual:pure_kannada_script
+Negative,ಎನ್ ಉಗದಿದಿಯಾ ಗುರು ಮಾತ್ ಮಾತಗು ಉಗುದಿದಿಯಾ ಈ video ನಾ ಏನಾದ್ರು tick tock star ಗಳು ಏನಾದ್ರು ನೋಡಿದ್ರೆ ನೇಣು ಹಕ್ಕೊತ್ತಾರೆ ಗುರು super🤣,20,0.75,0.05,0.8,0.2,0.4,False,medium,manual:pure_kannada_script
+Negative,@MADHU S B ಪಕ್ಕಾ ಹೇಳ್ದೆ ಗುರು.... ಈ ಗೂಬಾಡ್ ನನ್ಮಕ್ಳು,9,0.6667,0.1111,0.7778,0.2222,0.4444,False,medium,manual:pure_kannada_script
+Positive,ಸೂಪರ್ ........ bigg ಫ್ಯಾನ್ of  ರಕ್ಷಿತ್ shetty,7,0.5,0.3333,0.8333,0.1667,0.3333,False,medium,manual:pure_kannada_script
+Positive,ನಕ್ಕನ್ ಹಾಕ್ರೋ ಸ್ಟೆಪ್ಪು.....tik tok internet access madtilla ..,8,0.4286,0.2857,0.7143,0.2857,0.5714,False,medium,manual:pure_kannada_script
+Positive,ಸೂಪರ್ ಸಾಂಗ್........ ತುಂಬಾ ಇಷ್ಟ ಆಯ್ತು.....  love you rakshith bhai,9,0.5556,0.2222,0.7778,0.2222,0.4444,False,medium,manual:pure_kannada_script
+Positive,ಗುರು ಅವರಿಗೆ ತಾಕತ್ತಿದ್ದರೆ ಯೂಟ್ಯೂಬ್ ಅರಸ್ ಆಗೋಕೆ ಹೇಳು 10 15 20 ಸೆಕೆಂಡ್ ಮಾಡೋ ಟಿಕ್ ಟಾಕ್ ಸಡೆಗಲಿಗೆ ಯೂಟ್ಯೂಬಲ್ಲಿ ಎಂಟು ಹತ್ತು ಇಪ್ಪತ್ತು ನಿಮಿಷ ವಿಡಿಯೋ ಮಾಡೋಕೆ ತಾಕತ್ತಿದೆಯಾ ಕೇಳು nnLove u ರೋಸ್ಟ್ team ಅಂಡ್ ಟ್ರೋಲ್ team,31,0.8571,0.0357,0.8929,0.1071,0.2143,False,medium,manual:pure_kannada_script
+Positive,ಅಜನೀಶ್ ಏನ್ ಮ್ಯೂಸಿಕ್ ಗುರುnಬಾಲಿವುಡ್ ಸಾಂಗ್ಸ್ ಗಿಂತ ಚೆನ್ನಾಗಿದೆnWaiting for fdfs,9,0.7778,0.1111,0.8889,0.1111,0.2222,False,medium,manual:pure_kannada_script
+Negative,Tiktokers present situation... nನೋಡುವವರು ಯಾರು ನಮ್ಮ ವೀಡಿಯೋನೂ,7,0.6667,0.1667,0.8333,0.1667,0.3333,False,medium,manual:pure_kannada_script
+Positive,@Sudeep K N ಹೌದು ಹುಲಿಯ ಜೈ ಹುಚ್ಚಾ ವೆಂಕಟ ಸೇನೆ.......,9,0.6667,0.1111,0.7778,0.2222,0.4444,False,medium,manual:pure_kannada_script
+Positive,@funny videos nAyyo Mang badde thadhe.. n ಅಚ್ಚಗನ್ನಡ ಹಚ್ಚಗನ್ನಡ.nಅಚ್ಚಗನ್ನಡ ಸಾಮಾನ್ಯವಾಗಿ ಬಳಸುವುದು ವಾಡಿಕೆ.nಹಚ್ಚಹಸಿರು ಪದದಲ್ಲಿ ಹಸಿರನ್ನು ಉನ್ನತೀಕರಣಗೊಳಿಸಿ,15,0.5714,0.2143,0.7857,0.2143,0.4286,False,medium,manual:pure_kannada_script
+Positive,ಮ್ಯೂಸಿಕ್ ತುಂಬಾ estaaythu bro,4,0.5,0.25,0.75,0.25,0.5,False,medium,manual:pure_kannada_script
+Negative,@Kiccha Vitthal ಲುಚ್ಛನ್ ಫ್ಯಾನ್ಸ್ ಉರ್ಕೋತಾವ್ರೆ d boss ಬೆಳಿಯೋದು ನೋಡಿ... ಕಂಜೂಸ್ ನನ್ ಮಕ್ಳು... ಸೇಮ್ ಅವುನ್ ತರ ನೇ msg ಮಾಡ್ತಾವ್ರೆ  ಸರಿ ಬಿಡಿ ಅಂತಾ ಸೇಮ್ ಡೈಲೌಗ್ ಲುಚ್ಚಾ ಹೇಳ್ತಾನೆ ಸರಿ ಬಿಡಿ ಅಂತಾ lol,29,0.8214,0.0357,0.8571,0.1429,0.2857,False,medium,manual:pure_kannada_script
+Mixed feelings,@prithvi nayak lo ಶಿಷ್ಯ ವಿಷ್ಯ ಗೊತಾಯ್ತಾ... ನಾನು ಇವತ್ತು ಥಿಯೇಟರ್ ಗೇ ಹೋಗಿದ್ದೆ ದಬಾಂಗ್ 3 ಅಡ್ವಾನ್ಸ್ ಟಿಕೆಟ್ ತಗೋಳೋಕೆ.. ಅವ್ರು ಹೇಳಿದ್ರು ಏಲಿಯನ್ಸ್ ಬಂದು ಟಿಕೆಟ್ ತಗೊಂಡು ಹೋದ್ವು 1000ಡೇಸ್ sold out anta... ನಂಗೆ ಸುರ್ಪ್ರೈಸ್ ಆಯ್ತು ಲುಚ್ಚಾ ಸುದೀಪ್ ಗೇ ಬೇರೆ ಗ್ರಹ ದಲ್ಲೂ ಫ್ಯಾನ್ಸ್ ಇದಾರೆ ಅಂತಾ omg.. !!!,41,0.8421,0.0526,0.8947,0.1053,0.2105,False,medium,manual:pure_kannada_script
+Positive,ನಮ್ಮ ಕನ್ನಡ ಹೀರೋಗಳ ಲೆವೆಲ್ change agide after kgf.,8,0.5,0.25,0.75,0.25,0.5,False,medium,manual:pure_kannada_script
+Mixed feelings,@Nandi Parthasarathi 108ತಗೋ ಡೆಲವೇರಿ ಆಗೋ ಟೈಮ್ ಬಂದ್ರೆ ಈ no ಗೇ cl ಮಾಡು,12,0.7273,0.0909,0.8182,0.1818,0.3636,False,medium,manual:pure_kannada_script
+Positive,ಸೂಪರ್ ಸರ್ ಈ ಸಾಂಗ್ ನನಿಗಂತೂ ತುಂಬ ಈ ಆಡು ದಿಫ್ಫ್ರೆಂಟ್ ಅಂತ ಅನಿಸಿದರೆ ನನ್  ಫೇವರೆಟ್ ಸಾಂಗ್ ಆಗಿದೆ ಕಣ್ರೀ. ವಿಜಯ್ ಪ್ರಕಾಶ್ ಸರ್ ವಾಯ್ಸ್ please more then peples watch this song super ಅವನೇ ಶ್ರೀಮನ್ನಾರಾಯಣ. ಇಷ್ಟ ಆದ್ರೆ ಲೈಕ್ ಮಾಡಿ. ಇಷ್ಟ ಆಗಲಿಲ್ಲವಾ ಸುಮ್ನೆ ಕುತ್ಕೊಳ್ಳಿ ಯಾಕ್ ಸುಮ್ನೆ  ಡಿಸ್ ಲೈಕ್ ಮಾಡ್ತೀರ,43,0.814,0.0233,0.8372,0.1628,0.3256,False,medium,manual:pure_kannada_script
+Mixed feelings,ಸರ್ bigg boss house ಗೆ ಹೋಗಿ ನೀವೇ ಗೆಲ್ತಿರಾ 🥺,9,0.625,0.125,0.75,0.25,0.5,False,medium,manual:pure_kannada_script
+Positive,ಬಂದ ಹಾದಿಗೆ ರಚಿಸಲು ಹೊಸದೇ ಶಾಸನ ಮೆರೆಯಲಿ ಗಗನದಲಿ ನಿಮ್ಮದೆ ಲಾಂಛನ ಯುದ್ಧ ಮಾಡಬೇಕು ಓದಬಾರದು nಕಟುಕರ ಮುಂದೆ ಭಗವದ್ಗೀತೆ loved itnMy favorite line superb lyrics,21,0.7143,0.0476,0.7619,0.2381,0.4762,False,medium,manual:pure_kannada_script
+Positive,ಅದ್ಬುತವಾದ ಮಾತುಗಳು ಆಡಿದಿರಿ ನೀವು ..Mast maga Ni best maga,9,0.5,0.25,0.75,0.25,0.5,False,medium,manual:pure_kannada_script
+Negative,@Nandi Parthasarathi ನಂದಿನಿ 1 ಲೀಟರ್ ಹಾಲು ಕೊಡಿ plz,8,0.6667,0.1667,0.8333,0.1667,0.3333,False,medium,manual:pure_kannada_script
+Negative,@prithvi nayak ಪೈಲ್ವಾನ್ ರನ್ನಿಂಗ್ ಸಕ್ಸಸ್ ಫುಲ್ ಇನ್ mars,8,0.625,0.25,0.875,0.125,0.25,False,medium,manual:pure_kannada_script
+Positive,ದೃಷ್ಟಿ ನನ್ನೋಬ್ಬನ ಮೇಲಿಡಿ ತಪ್ಪದು ನಿಜ ಮನರಂಜನೆ film nodo munchene ee song ista adavaru like madi,15,0.4,0.4,0.8,0.2,0.4,False,medium,manual:pure_kannada_script
