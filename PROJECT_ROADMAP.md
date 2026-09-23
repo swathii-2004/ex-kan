@@ -102,11 +102,11 @@ Every screen answers one question: *Analyze* = "what did you say?", *Result* = "
 - [ ] ⏳ Prepare Shwetha's 240 net-new rows as a SEPARATE validation file (NOT merged into training data) — tag source clearly, apply label mapping (Depressive→distress, Non-Depressive→not-distress, Neutral→exclude), save as `data/processed/validation_depression_labeled.csv`. Used only AFTER model training, to sanity-check whether the sentiment-proxy-trained model also correctly identifies genuinely depression-labeled text as distress. (Confirmed: no such file exists anywhere in the repo yet.)
 
 ### Phase 2 — Model Training
-- [ ] ⏳ Load and finalize bucketed dataset (train/val/test split within each bucket)
-- [ ] ⏳ Map sentiment labels → distress / not-distress (Negative + Mixed = distress)
-- [ ] ⏳ Fine-tune MuRIL for binary classification
-- [ ] ⏳ Evaluate baseline accuracy/F1 — confirm model is "good enough" to be a valid test subject (not the research contribution itself)
-- [ ] ⏳ Save trained model checkpoint
+- [x] ✅ Load and finalize bucketed dataset (train/val/test split within each bucket)
+- [x] ✅ Map sentiment labels → distress / not-distress (Negative + Mixed = distress)
+- [x] ✅ Fine-tune MuRIL for binary classification
+- [x] ✅ Evaluate baseline accuracy/F1 — Overall: accuracy=75.3%, precision=0.683, recall=0.546, F1=0.607. Per-bucket: Low acc=0.798 (n=257), Medium acc=0.529 (n=17, small sample — high variance expected), High acc=0.673 (n=98). Note: a first training run showed slightly different numbers (77.7% acc) before being lost to a Colab session timeout; this run's numbers are the final recorded results. Run-to-run variance is expected given Medium's small test set.
+- [x] ✅ Save trained model checkpoint (`model/checkpoints/ex_kan_model`, confirmed gitignored)
 
 ### Phase 3 — Explainability Pipeline
 - [ ] ⏳ Integrate SHAP on trained model (start with 5–10 samples to validate pipeline)
