@@ -90,6 +90,8 @@ Every screen answers one question: *Analyze* = "what did you say?", *Result* = "
 > **Note — dataset contamination finding, Medium bucket (2026-09-21, smaller-sample):** Manual audit (n=19 Medium) found ~21% of Medium bucket rows contain non-Kannada contamination (English sentences mentioning "Kannada" as a topic, misspellings miscounted as Romanized Kannada, and Hindi-in-Latin-script indistinguishable from Romanized Kannada). Unlike High, this has not been re-audited at scale or reduced to a verified-clean subset. This is a documented dataset limitation, to be reported in the paper's Limitations section, not a blocking issue for proceeding to model training.
 >
 > Medium bucket: one batch audited (n=400), 176 clean rows, 40.75% genuine contamination rate (excluding 61 rows reclassified as valid native-Kannada-script code-mixing, saved separately as native_script_codemix_medium.csv). Medium's contamination rate is notably higher than High's ~29.7%, consistent with Medium containing weaker mixing signal per row by construction. Only one batch was audited due to time constraints; remaining Medium rows are unaudited and use raw bucket assignment.
+>
+> Medium bucket: two batches audited (n=800 total, 64% of pool). Batch 1: 40.75% contamination (n=400). Batch 2: 48.6% contamination (n=400). Combined: 48.3%. Rate varies notably between batches — with only two samples, this could reflect either genuine pool heterogeneity or normal batch-to-batch variance; a third batch would be needed to distinguish these. Native-script code-mixing (140 rows total) is tracked separately, not counted as contamination. Final clean Medium count: 341 rows.
 
 ### Phase 1 — Project Setup
 - [x] ✅ Create project folder structure (backend/, frontend/, model/, data/, notebooks/)
