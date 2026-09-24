@@ -1,0 +1,25 @@
+label,text,n_tokens,kannada_script_pct,romanized_kannada_pct,kannada_language_pct,english_pct,effective_score,low_confidence,bucket,reject_reason
+Negative,@TROLL MONSTER_KANNADA ಲೋ ಬೋಳಿಕೆ,4,0.6667,0.0,0.6667,0.3333,0.6667,True,high,manual:pure_kannada_script
+Mixed feelings,@s s Islam ಎಲ್ಲ ದೇಶಗಳಿಗೂ ಮಾರಕ .,7,0.6,0.0,0.6,0.4,0.8,False,high,manual:pure_kannada_script
+Mixed feelings,@its my opinion ಬಹಳ ಧನ್ಯವಾದಗಳು.....,5,0.4,0.0,0.4,0.6,0.8,False,high,manual:pure_kannada_script
+Positive,ತುಂಬಾ ಒಳ್ಳೆ ಸಿನೆಮಾ.. Best movie of 2020 in kannada,9,0.4286,0.0,0.4286,0.5714,0.8571,False,high,manual:pure_kannada_script
+Negative,6-5=2 film ತಂಡ ಮಾಡಿದೆ andiddake...e ಫಿಲ್ಮ್ ತುಂಬಾ ಜನ ನೋಡದೆ ಇರ್ಬೋದು...aa ಫಿಲ್ಮ್ ತುಂಬಾ ಗಿಮಿಕ್ ಇಂದ ತುಂಬಿತ್ತು...but this film..has good story base...stop promoting with 6-5=2....all the best,25,0.5714,0.0476,0.619,0.381,0.7619,False,high,manual:pure_kannada_script
+Mixed feelings,Sir Karnataka outside promotion ಚನ್ನಾಗಿ ಮಾಡಿ,6,0.4,0.0,0.4,0.6,0.8,False,high,manual:pure_kannada_script
+Mixed feelings,Promotion ಚನ್ನಾಗಿ ಮಾಡಿ sir. yeno sir Karnataka outside film sound ಮಾಡ್ತಾ ಇಲ್ಲ. ನಿಮಗಿಂತ ನಾಮಿಗೆ ಈ ಫಿಲ್ಮ ಹಿಟ್ ಆಗಲ್ಲಿ ಅನೋ ಆಸೆ ಇದೆ sir,22,0.619,0.0476,0.6667,0.3333,0.6667,False,high,manual:pure_kannada_script
+Positive,Hands UP​... ಇದು ಚರಿತ್ರೆ ಸೃಷ್ಟಿಸೋ ಅವತಾರ... #ASN waiting for you,10,0.5,0.0,0.5,0.5,1.0,False,high,manual:pure_kannada_script
+Positive,ಕನ್ನಡದಲ್ಲೆ ಹೆಚ್ಚಾಗಿ ಮಾತನಾಡಿದ್ದಕ್ಕೆ ಧನ್ಯವಾದಗಳು...nAll the best sr,7,0.5714,0.0,0.5714,0.4286,0.8571,False,high,manual:pure_kannada_script
+Positive,ಈ ಯುಗದ ಶಂಕರ್ ನಾಗ್ ಗುರು ನೀನು  all the best from DBOSS fans,12,0.5455,0.0,0.5455,0.4545,0.9091,False,high,manual:pure_kannada_script
+Mixed feelings,@Wild Rex ಕಟ್ಟಬೇಕು bronಖಂಡಿತಾ ಕಟ್ಟುತ್ತೆ  bro,6,0.6,0.0,0.6,0.4,0.8,False,high,manual:pure_kannada_script
+Negative,Making ತುಂಬಾ ಚನ್ನಾಗಿದೆ  Lyrics Not good,6,0.5,0.0,0.5,0.5,1.0,False,high,manual:pure_kannada_script
+Positive,Super.. I ತರಹದ song ಕೇಳಿ ತುಂಬಾ ದಿನ ಆಯ್ತು,8,0.625,0.0,0.625,0.375,0.75,False,high,manual:pure_kannada_script
+Positive,ಇದೇ ಟ್ರೇಂಡ್ ಸೆಟ್ಟಿಂಗ್ ಎಂದರೆ... All the best ASN,8,0.6667,0.0,0.6667,0.3333,0.6667,False,high,manual:pure_kannada_script
+Negative,ವಿಜಯ್ ಪ್ರಕಾಶ್ ಅವರಿಗೆ ಈ ಸಾಂಗ್ match ಆಗ್ತಿಲ್ಲ but music is good,11,0.5455,0.0,0.5455,0.4545,0.9091,False,high,manual:pure_kannada_script
+Positive,Super   n  ಜೈ ಡಿ ಬಾಸ್,5,0.6,0.0,0.6,0.4,0.8,False,high,manual:pure_kannada_script
+Positive,ಡಿ ಬಾಸ್ ಅಭಿಮಾನಿಗಳಿಂದ all the ಬೇಸ್ಟ್,6,0.6667,0.0,0.6667,0.3333,0.6667,False,high,manual:pure_kannada_script
+Positive,ಸಾಂಗ್ ಬೆಂಕಿ n,3,0.6667,0.0,0.6667,0.3333,0.6667,True,high,manual:pure_kannada_script
+Positive,@Manoj Gowda ಮಲಯಾಳಿಗರ ಸಿನಿಮಾ ಅಭಿರುಚಿ ತುಂಬಾ ವಿಚಿತ್ರ (in a positive way) ವಾದದ್ದು,12,0.5455,0.0909,0.6364,0.3636,0.7273,False,high,manual:pure_kannada_script
+Positive,song na status ಇಟ್ಟಿರೊರು ಲೈಕ್ ಮಾಡ್ರಪ್ಪ,6,0.5,0.0,0.5,0.5,1.0,False,high,manual:pure_kannada_script
+Positive,ಇದು ಚರಿತ್ರೆ ಸ್ರೃಷ್ಟಿಸೋ ಹಾಡು super super super,7,0.5714,0.0,0.5714,0.4286,0.8571,False,high,manual:pure_kannada_script
+Positive,@Akki neo ನಾನು  ಎಲ್ಲಾ  3 ಚಿತ್ರಗಳನ್ನು  ನೋಡಿದೆ. ನನಗೆ ಇಷ್ಟ ಆಯ್ತು . In fact  it     nInspired  me to think creative. ಆದ್ರೆ  ಮೂವಿ ಗೆಲ್ಲಿಸೋಕೆ  ಕೆಲವರಿಂದಾನೆ ಸಾಧ್ಯ  ಇಲ್ವಲ್ಲ,25,0.5909,0.0909,0.6818,0.3182,0.6364,False,high,manual:pure_kannada_script
+Positive,Song ಹೆಂಗೆ......ಹೌದು ಹುಲಿಯಾ...,3,0.6667,0.0,0.6667,0.3333,0.6667,True,high,manual:pure_kannada_script
+Positive,Sir ಗೊತ್ತು sir ಈ video ಮಾಡಿ 1ವಾರ ಆಗಿದೆ ಅದುನ್ನ ಮೊದ್ಲು ನೋಡಿ sir,12,0.6667,0.0,0.6667,0.3333,0.6667,False,high,manual:pure_kannada_script
