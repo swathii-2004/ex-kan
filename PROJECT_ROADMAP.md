@@ -105,7 +105,7 @@ Every screen answers one question: *Analyze* = "what did you say?", *Result* = "
 - [x] ✅ Load and finalize bucketed dataset (train/val/test split within each bucket)
 - [x] ✅ Map sentiment labels → distress / not-distress (Negative + Mixed = distress)
 - [x] ✅ Fine-tune MuRIL for binary classification
-- [x] ✅ Evaluate baseline accuracy/F1 — Overall: accuracy=75.3%, precision=0.683, recall=0.546, F1=0.607. Per-bucket: Low acc=0.798 (n=257), Medium acc=0.529 (n=17, small sample — high variance expected), High acc=0.673 (n=98). Note: a first training run showed slightly different numbers (77.7% acc) before being lost to a Colab session timeout; this run's numbers are the final recorded results. Run-to-run variance is expected given Medium's small test set.
+- [x] ✅ Evaluate baseline accuracy/F1 — FINAL (trained on fully-audited dataset: Low 3,696 + Medium 514 + High 1,280 + native-script 237): Overall accuracy=72.2%, precision=0.639, recall=0.556, F1=0.595. Per-bucket: Low acc=0.767/f1=0.577 (n=257), Medium acc=0.608/f1=0.655 (n=51), High acc=0.656/f1=0.551 (n=128). Native-script (informational, n=24): acc=0.833. Two training runs on this dataset produced similar results (F1 0.632 and 0.595), confirming stability. This is the final model used for XAI faithfulness experiments.
 - [x] ✅ Save trained model checkpoint (`model/checkpoints/ex_kan_model`, confirmed gitignored)
 
 ### Phase 3 — Explainability Pipeline
