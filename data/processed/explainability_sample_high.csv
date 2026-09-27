@@ -1,0 +1,301 @@
+label,text,n_tokens,kannada_script_pct,romanized_kannada_pct,kannada_language_pct,english_pct,effective_score,low_confidence,bucket
+Positive,RAKSHIT ABHIMAANIGALE!! Yaaru yaaru aa signature stepna try maadidiro illi like maadi!!,12,0.0,0.6,0.6,0.4,0.8,False,high
+Positive,Correct agi helidera super 🤣🤣,5,0.0,0.5,0.5,0.5,1.0,False,high
+Positive,Niv supper boss,3,0.0,0.3333,0.3333,0.6667,0.6667,True,high
+Negative,Hing dance madidre ..... mugitu kathe....,6,0.0,0.5,0.5,0.5,1.0,False,high
+Negative,Super bro e nayiigulu erodrindane nam desha uddar agilla once again super bro,13,0.0,0.3846,0.3846,0.6154,0.7692,False,high
+Mixed feelings,Ur super sir..but ಒಂದ hit movi kodi sir navu adakoskara kaetidivi....,11,0.1,0.5,0.6,0.4,0.8,False,high
+Positive,Hands up ಇವ ಚರಿತ್ರೆ ಸೃಷ್ಟಿಸೋ ನಾರಾಯಣ,6,0.6667,0.0,0.6667,0.3333,0.6667,False,high
+Positive,super song sir. rakshith shetty sahebara fans ella like madi.,10,0.0,0.4,0.4,0.6,0.8,False,high
+Mixed feelings,En helde guru it's true,5,0.0,0.4,0.4,0.6,0.8,False,high
+Negative,No.. 1 sec saku summe mnt ella waste madtara,9,0.0,0.5,0.5,0.5,1.0,False,high
+Positive,ಸೂಪರ್ ಗುರೂ ಯೆನ್  ಸ್ವರ ಗುರೂ ನಿಂದು   Iam u r big fan  ur thinking  bro,14,0.4615,0.0,0.4615,0.5385,0.9231,False,high
+Negative,OLA marma? leay thu OLA na promote maadoke isht dodd message haktyeno? D boooos fans na nodi kalthko.....avrella huttidaagle amman akkan antha pure kannada words kalthu bandirodu......,27,0.0,0.5217,0.5217,0.4783,0.9565,False,high
+Mixed feelings,en music guru,3,0.0,0.3333,0.3333,0.6667,0.6667,True,high
+Positive,yen guru nam kannada film industry na yellaru seri bere level ge tagondu hogthaa iddare... superb music,17,0.0,0.3125,0.3125,0.6875,0.625,False,high
+Positive,Super agi roast madidiya guru.,5,0.0,0.4,0.4,0.6,0.8,False,high
+Negative,@Syed Akbar hello srk athava salman khan fan... Ninge race 3 ne sari... nnnnSuper story alvaa race 3,18,0.0,0.4545,0.4545,0.5455,0.9091,False,high
+Positive,Togari tippa story super,4,0.0,0.5,0.5,0.5,1.0,False,high
+Positive,Super guroonSakkattagittu video. ...,4,0.0,0.3333,0.3333,0.6667,0.6667,True,high
+Positive,naavu childhood days valag e story kelidde,7,0.0,0.4286,0.4286,0.5714,0.8571,False,high
+Positive,Please intha cinemagalannu     gellisona ......namma hemmeya Kannada cinema,8,0.0,0.6667,0.6667,0.3333,0.6667,False,high
+Mixed feelings,Bro sorry ond matu nang eetara troll madodu ella ishta agtirlilla first time nimm videos nodi sakkath kushiaytu nd ur video really give a good msg,26,0.0,0.4231,0.4231,0.5769,0.8462,False,high
+Negative,Views tumba kadime ide.,4,0.0,0.5,0.5,0.5,1.0,False,high
+Negative,ಶೇಕಡ 100(%) ರಷ್ಟು viruses na China ಉತ್ಪನ್ನ ಮಾಡುತ್ತೆ.....,8,0.6667,0.0,0.6667,0.3333,0.6667,False,high
+Positive,Super guru hinmele  nanu nimmn Abimani guru,7,0.0,0.5,0.5,0.5,1.0,False,high
+Negative,@Nandi Parthasarathi adu oscar ascar alla..🤣 graphics ge pakka oscar kodtare🤣,11,0.0,0.6,0.6,0.4,0.8,False,high
+Negative,Olledu ond pan India movie madro sumne yak eneno madkondu...,10,0.0,0.625,0.625,0.375,0.75,False,high
+Mixed feelings,ನೋಡ್ತಾ ಹೋದ್ರೆ ಸಾವಿರಾರು lyrical video ಗಳು,6,0.6667,0.0,0.6667,0.3333,0.6667,False,high
+Positive,En super movie sir edu....ond ond seen kuda mans mutto tara ede,12,0.0,0.4545,0.4545,0.5455,0.9091,False,high
+Negative,Yalla kannadigarugu ansthithu bere bashe movies maddohange yak namma kannada movies maddalla antha.. but evagaaa yak bere bashe movies nodbeku antha ansoke shuruuu agbhitidhe alva Karnataka???,26,0.0,0.6522,0.6522,0.3478,0.6957,False,high
+Negative,@Ambrish Mallad luccha fans nimma luccha suderpdu movie nodo Ella flop agtive side actor get fit baavali age eddane balegaara correctagi tindu barlike hell baavali🤣🤣,25,0.0,0.6087,0.6087,0.3913,0.7826,False,high
+Positive,Yav Ree dislike kodoru kannada movies belibek fist kannada next hero's elru nammavare...,13,0.0,0.3636,0.3636,0.6364,0.7273,False,high
+Negative,Lo gaandu nan magne d boss fans yake sata tariyoke dislike madtara nBere avru nodi urkolokke en avru bucket and balegara fans he,23,0.0,0.5652,0.5652,0.4348,0.8696,False,high
+Negative,Boli maklu yellaaa mobile ally nodtha edre énna theatre ge bandu yelli nodthaare,13,0.0,0.6667,0.6667,0.3333,0.6667,False,high
+Positive,Yalla hero fans e movie naa support madtini annoru like madi,11,0.0,0.4545,0.4545,0.5455,0.9091,False,high
+Positive,Kaytidde bro Yarana  lyrics aktara anta 🥰🥰tq,7,0.0,0.6667,0.6667,0.3333,0.6667,False,high
+Positive,Nim song antu super 🤝,5,0.0,0.5,0.5,0.5,1.0,False,high
+Mixed feelings,Insta link ಅಕಿದ್ದೀನಿ ನೋಡಿ bro ಅಲ್ಲಿ ಬಂದು,7,0.5714,0.0,0.5714,0.4286,0.8571,False,high
+Positive,Hats of Shankar Ashvath Sir.nimma e swabimaanada jeevana Sukakarawaagi Saagali.,10,0.0,0.4,0.4,0.6,0.8,False,high
+Negative,E video na unlike madoru nijavaglu kannads davaru ala,9,0.0,0.4444,0.4444,0.5556,0.8889,False,high
+Positive,Startup start maadalu capacity growth maadalu tips kodi . Ondu separate video maadi .pls,14,0.0,0.3333,0.3333,0.6667,0.6667,False,high
+Mixed feelings,Game name yavdu bro...,4,0.0,0.3333,0.3333,0.6667,0.6667,True,high
+Negative,Ayyo gubalgala only tiktok tiktok antha odkotavre only not tiktok 59 apps ban agirodu,14,0.0,0.6154,0.6154,0.3846,0.7692,False,high
+Negative,Modlu ee chinese apps galna india dalli ban madbeku...,9,0.0,0.5,0.5,0.5,1.0,False,high
+Positive,Ondu varshakke 1or2 film madodkintha entha ondu olle film madidre kannada industry ellige ogutthe,14,0.0,0.6923,0.6923,0.3077,0.6154,False,high
+Negative,Yanta jana brother nam deshakkoskara 1 app delete madoke agalva avarige,11,0.0,0.5,0.5,0.5,1.0,False,high
+Positive,Super song.....with dance sakathagide,4,0.0,0.3333,0.3333,0.6667,0.6667,True,high
+Negative,Howdu movie Adbhuta..... tumba chennagide..... but ending swalpa disturbing ansatte..... adi and diya ondagiddidre innu chennagirtittu..... Elru tumba chennag act madidare,21,0.0,0.625,0.625,0.375,0.75,False,high
+Positive,Ayyoo.  Teligram nalli 10 ralli 9 jana nodidaare..n Matte naanu 12 saari nodidini ..what a movie ya... Mother sentiment,19,0.0,0.5833,0.5833,0.4167,0.8333,False,high
+Mixed feelings,First hog film nodu. Amele yen bekadru comment madu.,9,0.0,0.375,0.375,0.625,0.75,False,high
+Positive,Super sir namge thumba istavada kathe nam parents ge kelisbeku aadastu bega idanna,13,0.0,0.6154,0.6154,0.3846,0.7692,False,high
+Positive,Nimage aa devaru olledu madali Appaji...nNimma matugalu keli nange 100% Dairya bantu appaji thank you for your inspiration,18,0.0,0.5333,0.5333,0.4667,0.9333,False,high
+Positive,Banda  #AvanesrimannarayananAll the best,4,0.0,0.5,0.5,0.5,1.0,False,high
+Mixed feelings,Mr naveen raj Yenu nim Uddesha??n Nanu D BOSS Fan,10,0.0,0.6,0.6,0.4,0.8,False,high
+Positive,Nammaneg bandidda mare full party,5,0.0,0.4,0.4,0.6,0.8,False,high
+Negative,Delete hadru nanu downloade made,5,0.0,0.6,0.6,0.4,0.8,False,high
+Negative,Comedy aggie nodorige comedy nee,5,0.0,0.4,0.4,0.6,0.8,False,high
+Positive,ನನ್ನ ಕಣ್ಣಂಚ್ಚಲಿ ನೀರು ಬಂತು..Sir ur great,6,0.6667,0.0,0.6667,0.3333,0.6667,False,high
+Negative,@Creative Kannadiga  le gubald atte Alla magalaganda andangaitu,8,0.0,0.6667,0.6667,0.3333,0.6667,False,high
+Mixed feelings,nim taste gottaythu.. nthaavu dandupalya-5 ge wait maadta idiri alva,10,0.0,0.5556,0.5556,0.4444,0.8889,False,high
+Positive,Neen super guru🤩🤣,3,0.0,0.3333,0.3333,0.6667,0.6667,True,high
+Positive,Hamsalekha feel yarige bantu like madi...,6,0.0,0.4,0.4,0.6,0.8,False,high
+Positive,Idu kgf beat madutte annoru like here,7,0.0,0.5714,0.5714,0.4286,0.8571,False,high
+Negative,Hands  up annodu heno bosudike,5,0.0,0.6,0.6,0.4,0.8,False,high
+Positive,@Prasad Raj tulunad and kannada bashe meli abhimana super guru,10,0.0,0.5556,0.5556,0.4444,0.8889,False,high
+Positive,Kannada ne best adrallu kannada songs adre hen andkondodira,9,0.0,0.3333,0.3333,0.6667,0.6667,False,high
+Positive,open song edde agirlli n super music  super stepn         Bharjari gidde SongnnNalle release movie All the best  God bless you nn Dhruva Sarja Abhimanigallindan  Jaiii Anjaneya,26,0.0,0.3333,0.3333,0.6667,0.6667,False,high
+Positive,En guru nin line's galu super agi helidiyaa bidu,9,0.0,0.6667,0.6667,0.3333,0.6667,False,high
+Negative,Sir ond compeny yalli kelsa madidra gov employes labor officer bookmadkond laber ge 5000 salry kotre employe mane  est kasta alva. yava gov sarilla sir nav egga comment madkondu saibeku aste,31,0.0,0.5667,0.5667,0.4333,0.8667,False,high
+Positive,Anna super agi edit madidiya,5,0.0,0.4,0.4,0.6,0.8,False,high
+Negative,Remake movie ansthe,3,0.0,0.3333,0.3333,0.6667,0.6667,True,high
+Positive,ಸೂಪರ್ ಗುರು vp voice ultimate,5,0.4,0.0,0.4,0.6,0.8,False,high
+Positive,En song guru fidha agode....Idhu charithre srustiso avatharaaa... Signature step shuruhachkoli inna..,12,0.0,0.6667,0.6667,0.3333,0.6667,False,high
+Positive,Nimma customer reactionna video maadi youtube channel open maadi upload madi sir,12,0.0,0.4167,0.4167,0.5833,0.8333,False,high
+Positive,Supr bro aadhh yen kannadaa aaadhh yen punch waaaaa supr bro,11,0.0,0.4444,0.4444,0.5556,0.8889,False,high
+Negative,Sir nivu news helida hage heltiri sir,7,0.0,0.5714,0.5714,0.4286,0.8571,False,high
+Positive,Genuine information nimdhu,3,0.0,0.3333,0.3333,0.6667,0.6667,True,high
+Mixed feelings,@chetan kumarab guru ve.... aha comment maddhavn hesru nodo....nanalla kano,10,0.0,0.5,0.5,0.5,1.0,False,high
+Mixed feelings,jana theatre ge bandilla aadrinda collection kadime aagide,8,0.0,0.5,0.5,0.5,1.0,False,high
+Positive,Guru China rajakiya vyavaste bagge video madi,7,0.0,0.6667,0.6667,0.3333,0.6667,False,high
+Positive,D bosss fans kade inda all the best prajju,9,0.0,0.375,0.375,0.625,0.75,False,high
+Negative,Bindu gowda ge super agi ugididdeera,6,0.0,0.6667,0.6667,0.3333,0.6667,False,high
+Positive,Yes hange kick kodta hogutte.. ಒಳ್ಳೆ synch ಮಾಡಿದ್ದಾರೆ..,8,0.25,0.375,0.625,0.375,0.75,False,high
+Positive,Kannada promotion beda.. Kannadigaru nimmana gellistare,6,0.0,0.6,0.6,0.4,0.8,False,high
+Mixed feelings,Modalu prana mukya amele cinema... Plz don't lose hope DIYA chitratanda.... Wait for time,14,0.0,0.4444,0.4444,0.5556,0.8889,False,high
+Positive,Hand up bro.... super agide bro Namma Kannada movie adre sumanena,11,0.0,0.375,0.375,0.625,0.75,False,high
+Negative,Supper  p boss... Yar unlike madidhare nodi.. urkondu saytor anta,10,0.0,0.625,0.625,0.375,0.75,False,high
+Mixed feelings,Bro tik tok tirga bandida bro nijvagluindia dali,8,0.0,0.625,0.625,0.375,0.75,False,high
+Mixed feelings,Edu yav game sir..,4,0.0,0.5,0.5,0.5,1.0,False,high
+Positive,D boss movie henge irli fans hatrikk maadtare pakka,9,0.0,0.5556,0.5556,0.4444,0.8889,False,high
+Positive,Dina 7-8  sala song kelisikontini.,5,0.0,0.5,0.5,0.5,1.0,False,high
+Mixed feelings,ಹತ್ತು ವರ್ಷ strict  president rule ಬರಬೇಕು.,6,0.5,0.0,0.5,0.5,1.0,False,high
+Positive,Enta song guru idu super,5,0.0,0.4,0.4,0.6,0.8,False,high
+Negative,Tuu avr sentiment na touch madi kaan neer haksi adana cover photo madi view tagotira,15,0.0,0.5333,0.5333,0.4667,0.9333,False,high
+Positive,Kannada film industry indialle no 1 agutte,7,0.0,0.3333,0.3333,0.6667,0.6667,False,high
+Positive,Guru namaskara ennu chennagi tale dhengu.sonu Gowda bin*** Gowda evarge ennu tale li brain Ella anusutte,16,0.0,0.5833,0.5833,0.4167,0.8333,False,high
+Positive,Boss jote yaar chennagirtaro avrigella nam d boss fans yavaglu support made madtare alva bro,15,0.0,0.4,0.4,0.6,0.8,False,high
+Positive,10 dubbing movie barudakkintha 1 e thara movie bandare sakku.,10,0.0,0.5,0.5,0.5,1.0,False,high
+Positive,Well said part 2 madu chinna.. chanagide,7,0.0,0.5,0.5,0.5,1.0,False,high
+Negative,E song Alli dislike mado antadu enide,7,0.0,0.5,0.5,0.5,1.0,False,high
+Positive,Yarella e hadige edict agidira like Madi,7,0.0,0.5,0.5,0.5,1.0,False,high
+Mixed feelings,Crazy  guru ninu,3,0.0,0.3333,0.3333,0.6667,0.6667,True,high
+Positive,En guru edu song super,5,0.0,0.4,0.4,0.6,0.8,False,high
+Negative,I feel jasti bitta kottri... Bari  lyrical video sakagittu,9,0.0,0.4286,0.4286,0.5714,0.8571,False,high
+Negative,Lo gube don't compare anyone yellaru namma kannada super star,10,0.0,0.3,0.3,0.7,0.6,False,high
+Positive,Bgm super ide ಶೆಟ್ರೇ,4,0.25,0.25,0.5,0.5,1.0,False,high
+Positive,Super agi helidiya guru,4,0.0,0.5,0.5,0.5,1.0,False,high
+Positive,Kannada industry is next level ivaga yaru alladsak agalla Kannada industry na,12,0.0,0.3636,0.3636,0.6364,0.7273,False,high
+Positive,Waaa Super super Rakshit sir And ajaneesh lokanaath Anna Music super,11,0.0,0.4,0.4,0.6,0.8,False,high
+Positive,Rakshith Shetty fans ondu like kodi nn,7,0.0,0.6667,0.6667,0.3333,0.6667,False,high
+Positive,Dia nan recent aagi nodiro moviegalalli Adbutha,7,0.0,0.6667,0.6667,0.3333,0.6667,False,high
+Positive,Guru super.... Evarige chenaag ittidiyaa,5,0.0,0.6667,0.6667,0.3333,0.6667,True,high
+Positive,Please ಇನ್ನೊಂದು ಸಾರಿ re release Maadi.,6,0.4,0.0,0.4,0.6,0.8,False,high
+Negative,Trailer nalle full story gottagbidttu...trailer bere tara try madbekittu,9,0.0,0.375,0.375,0.625,0.75,False,high
+Positive,Guru ninge naanu Dodda fan,5,0.0,0.5,0.5,0.5,1.0,False,high
+Negative,Howdu bro app uninstall madudrea avrig amount hogodu kamiagutea plzzzzz uninstall Madi beavarce appp Adu thuuuuu,16,0.0,0.5455,0.5455,0.4545,0.9091,False,high
+Positive,Guru ninu super,3,0.0,0.3333,0.3333,0.6667,0.6667,True,high
+Positive,Jeevana banda haage accept madtha sagtidira wish you good luck,10,0.0,0.5,0.5,0.5,1.0,False,high
+Positive,Togari tippa super star,4,0.0,0.5,0.5,0.5,1.0,False,high
+Positive,Ee song ond hava start madutee ansidrey like madi,9,0.0,0.6667,0.6667,0.3333,0.6667,False,high
+Positive,KGF chaffer 2 beda bare baku,6,0.0,0.6,0.6,0.4,0.8,False,high
+Positive,Offter long back coming see Kannada cinema...........New multitalented shankaranna............kannadada gandu,10,0.0,0.4286,0.4286,0.5714,0.8571,False,high
+Positive,sr u r great sr nimage Kannada chitrarangadalli avakashagalu sigalli sr sudeep sr darashan sr mattu yesh sr plz yella Kannada hirogalu nim pilimagalalli avakashagalu  kudri plz plz plz  plz plz,31,0.0,0.4828,0.4828,0.5172,0.9655,False,high
+Positive,Super Anna nija anna,4,0.0,0.3333,0.3333,0.6667,0.6667,True,high
+Negative,Lo remake alla antha hekde tane,6,0.0,0.6667,0.6667,0.3333,0.6667,False,high
+Positive,Sir nange ashwath sir andre praana..nan appana hage iddru.. avranna kalkonda dukka tumbaa ide nange..and I respect u tooo sir...god bless u sir..,23,0.0,0.5238,0.5238,0.4762,0.9524,False,high
+Positive,Super Kannada  song  mach nanu avane   Kannada,7,0.0,0.4,0.4,0.6,0.8,False,high
+Positive,Bro z news(Hindi) channel Alli nodi,6,0.0,0.4,0.4,0.6,0.8,False,high
+Negative,Bari prayojanake barada films nododu Facebook YouTube li comments hodiyodu...yaavalo hudugi siktale anta instagram li search madodo ede Indians hanebaraha dhesha uddara hada hage ayyo,25,0.0,0.6818,0.6818,0.3182,0.6364,False,high
+Negative,Rashmika haters like madi,4,0.0,0.5,0.5,0.5,1.0,False,high
+Positive,An anna nivu super bidi anna nivu,7,0.0,0.4286,0.4286,0.5714,0.8571,False,high
+Positive,Nanu 2 weaks ninda huccha agbitidini boss song ge fiddha agbitidini,11,0.0,0.7,0.7,0.3,0.6,False,high
+Positive,howdu first time keldaga nangu ok anstu bt ega kelbeku anstide and sakkath dance moves,15,0.0,0.6,0.6,0.4,0.8,False,high
+Mixed feelings,ಗುರು ಮೂವಿ ನ re release madri.... Entha kannda film na support madlilla andre. Kannada ದಲ್ಲಿ ಮೀಡಿಯಾ Yak beku. Bhari avru trp koskara... Nam ಭಾಷೆ use madkondu ಬೇರೆ ಭಾಷೆ. ಫಿಲ್ಮ್ ಬಗ್ಗೆ. ತೋರಿಸುತ್ತಾರೆ.... Shame on kannda media..... But this film was. Heart touching,41,0.3667,0.2333,0.6,0.4,0.8,False,high
+Positive,Aa hudgi bandaga iro music nice,6,0.0,0.5,0.5,0.5,1.0,False,high
+Negative,@Avinashdada kichcha sari bidu nimamman kalsu keydu ningobba chik balegaran hutsi kalsthivi avnu nim bale serskondu ella ottige Kai thattivranthe signal alli enanthira bale pans now bale pans reaction hakro steppu,31,0.0,0.6667,0.6667,0.3333,0.6667,False,high
+Negative,Idu Fantasy Film tara kantide alva?,6,0.0,0.5,0.5,0.5,1.0,False,high
+Positive,@Harshan Maddy  kannada kke  nimma importance idre kushi ne,9,0.0,0.625,0.625,0.375,0.75,False,high
+Positive,@Royal Rumble story ge ee song relevantag idya...nEe song bekagitta anta...,11,0.0,0.375,0.375,0.625,0.75,False,high
+Negative,@TROLL MONSTER_KANNADA nD boob's beleyodanna nodi urakotidaranDagar fan namma BØSS beleyodanna nodi nimm gandu darshan ne urakondiddu......,17,0.0,0.6429,0.6429,0.3571,0.7143,False,high
+Positive,Hands up anta kottaddu yella language li onde title irli anta...yar opputtiri  illi like madi...,15,0.0,0.5385,0.5385,0.4615,0.9231,False,high
+Positive,Nan yavathu youtube video na like kuda madila but comment madidini so.....,12,0.0,0.3636,0.3636,0.6364,0.7273,False,high
+Positive,Nivu. Helodu sari china app ban agalebeku,7,0.0,0.3333,0.3333,0.6667,0.6667,False,high
+Positive,Nijavaaglu adbhutha film plz encourage Kannada movie,7,0.0,0.3333,0.3333,0.6667,0.6667,False,high
+Negative,Erbahudu please support maadi ea rakshit sitting sir genRashmikage hotte uribeku nodi,12,0.0,0.5833,0.5833,0.4167,0.8333,False,high
+Negative,First India na America ke compare madtidru alli hangide ingide anta ivaga. India na China compare madtavre nnNav bari compare madtivi vartu namunyaru compare modo hage hogalla,27,0.0,0.6957,0.6957,0.3043,0.6087,False,high
+Positive,Supper pa ........ Continue the work. ...  Tiktok videos nodi nodi thale kettogithu.............jai modi jai jai modi......,17,0.0,0.5455,0.5455,0.4545,0.9091,False,high
+Positive,ತುಂಬಾನೇ feel ಅಗ್ತಿದೆ,3,0.6667,0.0,0.6667,0.3333,0.6667,True,high
+Negative,Fan war shuru madbeda guru,5,0.0,0.4,0.4,0.6,0.8,False,high
+Mixed feelings,Hands up kannadigaru🤚,3,0.0,0.3333,0.3333,0.6667,0.6667,True,high
+Positive,Nijavada hero andre evare,4,0.0,0.5,0.5,0.5,1.0,False,high
+Positive,javari tippa superb ri,4,0.0,0.5,0.5,0.5,1.0,False,high
+Positive,Full roast madiddiya e somberigalige,5,0.0,0.4,0.4,0.6,0.8,False,high
+Mixed feelings,Idu yava game bro,4,0.0,0.5,0.5,0.5,1.0,False,high
+Negative,Chindi Song guru,3,0.0,0.5,0.5,0.5,1.0,True,high
+Positive,Boss nin vedio na use madkola roposo nalli post madtini pls bro,12,0.0,0.5,0.5,0.5,1.0,False,high
+Mixed feelings,@Arun Jaanu summne reply haki yak war madshtiya,8,0.0,0.5714,0.5714,0.4286,0.8571,False,high
+Mixed feelings,By mistakly nimma ondu video nodi subscribe agbitte  keep it up bro,12,0.0,0.4167,0.4167,0.5833,0.8333,False,high
+Mixed feelings,Ond ond film ge koti koti togotira.. ellide sir nim manaviyate.. help maadi sir evrige.. samanyadavru alla evru ashwath avr maga. Kannada industry ge hemmeya actor kanri.. punith sir neeve barbeku.. shivanna.. neevadru help maadi. Esht movie li Nim Appa ji avrge appa'n role madiddu evra appa'avr. Marebedi sir,49,0.0,0.6818,0.6818,0.3182,0.6364,False,high
+Positive,Pakka full gicchi gilili song... En song pa benki aiti.... Pakka ella record nu muriteti  .... Jai Karnataka,18,0.0,0.4545,0.4545,0.5455,0.9091,False,high
+Mixed feelings,devare devare devare devare shivane tandheye appane nivu super super duper mind blowing hero forever forever,16,0.0,0.5625,0.5625,0.4375,0.875,False,high
+Positive,Film suprrrrrr agi ede full clean film,7,0.0,0.3333,0.3333,0.6667,0.6667,False,high
+Positive,Shetru birthday party dina haadiro haadu aawaginindaa wait maadtide.....,9,0.0,0.5,0.5,0.5,1.0,False,high
+Positive,D Boss fans ಕಡೆಯಿಂದ ಆಲ್ di best,7,0.3333,0.0,0.3333,0.6667,0.6667,False,high
+Negative,Movie nodilla andre nimagu “ HANDS UP !!!!!”,8,0.0,0.5,0.5,0.5,1.0,False,high
+Negative,Dislike madidavar rashmika fans irbek,5,0.0,0.6,0.6,0.4,0.8,False,high
+Positive,Tik talkgintha nivu mado roast  best guru,7,0.0,0.5714,0.5714,0.4286,0.8571,False,high
+Negative,Instagram fallow back kodi Nev obre alla eradu,8,0.0,0.5714,0.5714,0.4286,0.8571,False,high
+Positive,Varshkond beda pa nidanake ne agli ee tara olle movie kotre saaku,12,0.0,0.6667,0.6667,0.3333,0.6667,False,high
+Positive,Bro na tiktok use madath idila but ivga tiktok installed madi  single star rating kotu uninstall madini,17,0.0,0.4706,0.4706,0.5294,0.9412,False,high
+Negative,ಯುದ್ಧ ಮಾಡಬೇಕು  ಓದಬಾರದು ಕಟುಕರ ಮುಂದೆ ಭಗವದ್ಗೀತೆ nAnd recently we can relate it to priyankareddycase,14,0.4286,0.1429,0.5714,0.4286,0.8571,False,high
+Positive,What a music ... nWhat a lyric...nWhat a choreography.... nWhat a camera working......nTotally awesome ... nನಿಜಕ್ಕೂ ಇದು ಚರಿತ್ರೆ ಸೃಷ್ಟಿಸೋ ಅವತಾರ... nಅಜನೀಶ್ ಗುರುಗಳೇ ನಿಮಗೊಂದು ಸಲಾಂ...nರಕ್ಷಿತ್ ಶೆಟ್ರೆ ಒಳ್ಳೇದಾಗಲಿ ..nಮೂರು ವರ್ಷ ಪಟ್ಟ ಶ್ರಮ ಫಲಕೊಡುವಂತಾಗಲಿ..... All the best to you sir,37,0.5161,0.0645,0.5806,0.4194,0.8387,False,high
+Negative,1.6k people are not liking this....innna en beko maaraya nimga ...,11,0.0,0.5,0.5,0.5,1.0,False,high
+Negative,Hindi yalli innu song reales madilla yake,7,0.0,0.5714,0.5714,0.4286,0.8571,False,high
+Negative,Sari nivu video na roast madi adre madvaga pubg atava free fire games hakondo madbedi a games kooda Chinese,19,0.0,0.5,0.5,0.5,1.0,False,high
+Mixed feelings,@Manoj Kolya Neenobne heege heltirodna naan Keliddu.. Watch his Trailer and Teasers first,13,0.0,0.5714,0.5714,0.4286,0.8571,False,high
+Positive,Superb pakka pan India movie aguthe,6,0.0,0.4,0.4,0.6,0.8,False,high
+Positive,Ondu varshakke 3 movie tegyodu dod'dalla mattu adralli ondu movie li hit kottu innerdu movie li flop adavara  jothe hudugi hodi hogodalla... 3 varshakke ondu super hit kottu avra personality ge dakke tarde hodre adunne success antha helboudu.... That is Rakshit Shetty.... Love u bro... Olle time ittu ansutte innu olle hudugi sigli nimge.... Haagodella holledakkenIndirect yake helodu direct agi Rashmika ge heliddu idu...🤷‍,64,0.0,0.66,0.66,0.34,0.68,False,high
+Mixed feelings,Anna game yavdu,3,0.0,0.3333,0.3333,0.6667,0.6667,True,high
+Positive,ಕಿಚ್ಚ ಸುದೀಪ್ ಅಭಿಮಾನಿಗಳು ವತಿಯಿಂದ  All the best,7,0.6667,0.0,0.6667,0.3333,0.6667,False,high
+Negative,Dislike madidavaru dagar rashimka fans,5,0.0,0.6,0.6,0.4,0.8,False,high
+Negative,Aagle tv li haaaktidaaralla guru.....,5,0.0,0.3333,0.3333,0.6667,0.6667,True,high
+Positive,Super Comedy togari tippa,4,0.0,0.6667,0.6667,0.3333,0.6667,True,high
+Positive,Signature stepge kaasu....Adakkentha theatre hogthini...,5,0.0,0.3333,0.3333,0.6667,0.6667,True,high
+Positive,Sir albede life enjoy madbedi Mahabharata odi,7,0.0,0.5,0.5,0.5,1.0,False,high
+Positive,@Creative Kannadiga haa bro...nange seetara ista ...avl videos roast maadbedi plzzz,11,0.0,0.5714,0.5714,0.4286,0.8571,False,high
+Negative,Worst movie. artane illa. 1 concept kuda illa.,8,0.0,0.5714,0.5714,0.4286,0.8571,False,high
+Mixed feelings,Mumbai alli release madi,4,0.0,0.5,0.5,0.5,1.0,False,high
+Positive,Sara super Nivu devara tara yallaratara duddide shinamadavaratra nimmatra holleya manasidde sara,12,0.0,0.6364,0.6364,0.3636,0.7273,False,high
+Positive,Bro Ten minutes + video madi bro niuo mado video na nodta edre nodtane erbeku anisutte,16,0.0,0.5714,0.5714,0.4286,0.8571,False,high
+Positive,Super Film sir account number kodi amount hakabeku nijavgalu,9,0.0,0.375,0.375,0.625,0.75,False,high
+Mixed feelings,Hands up  with ಅವನೇ ಶ್ರೀಮನ್ನಾರಾಯಣ,5,0.4,0.0,0.4,0.6,0.8,False,high
+Positive,Thandage thakka maga mado kelsa hemmenda madi all the best,10,0.0,0.7,0.7,0.3,0.6,False,high
+Positive,Sir nimna devru yavaglu chenagottirli sir,6,0.0,0.6667,0.6667,0.3333,0.6667,False,high
+Negative,@Dhananjay Kinyaje yen promotion madtare ivaru. Bengaluru bittu yelladru hogtara promotion madakke?nTamil,12,0.0,0.7,0.7,0.3,0.6,False,high
+Positive,Super bro nim matalli satya ide,6,0.0,0.5,0.5,0.5,1.0,False,high
+Positive,Bro nim editing spr nan nim videos fan e video Dali heliro song matrA spr,15,0.0,0.4286,0.4286,0.5714,0.8571,False,high
+Negative,BoLi Maklu ee tara videos nu dislike maadtare,8,0.0,0.4286,0.4286,0.5714,0.8571,False,high
+Positive,@Ashwini CP pls movie nodi. Ondu olle movie na mis madkolbedi.,11,0.0,0.5556,0.5556,0.4444,0.8889,False,high
+Positive,En chindi bgm guru sakkath....Jai ASN... from Appu abhimani,9,0.0,0.6667,0.6667,0.3333,0.6667,False,high
+Positive,Chennagide eno suspense ide,4,0.0,0.5,0.5,0.5,1.0,False,high
+Negative,Nijvaglu  bro... Nangu same hange ansbidtu.. Avrdu google pay number iddidre nane ond ticket duddu kotbidana ansbidtu... Nam oor theater alli e film halle illa..,25,0.0,0.6,0.6,0.4,0.8,False,high
+Negative,Benki music..yarappa dislike madirodu.... mostly rasmika mandana fans irbeku...n🤭🤭🤣🤣🤣🤣songe he inge in movie nodudre...aste,14,0.0,0.3636,0.3636,0.6364,0.7273,False,high
+Positive,Nannu nimma fan sir,4,0.0,0.5,0.5,0.5,1.0,False,high
+Positive,Asn film nodoru like maadi,5,0.0,0.6,0.6,0.4,0.8,False,high
+Positive,Very nice togari tippa story,5,0.0,0.4,0.4,0.6,0.8,False,high
+Negative,Guru chaines apps yavyavu antha ondhu list kodi avna nam mobile ali instal madala,14,0.0,0.5,0.5,0.5,1.0,False,high
+Positive,AvaneSrimannarayana du background music BGM release madi sir,8,0.0,0.4286,0.4286,0.5714,0.8571,False,high
+Positive,Superbb movie osm evthu movie nodied super,7,0.0,0.5714,0.5714,0.4286,0.8571,False,high
+Negative,Song is super.. But innu swalp fast madiddare sakattagirodu,9,0.0,0.5,0.5,0.5,1.0,False,high
+Positive,Sakat  agide song music,4,0.0,0.5,0.5,0.5,1.0,False,high
+Negative,@Its Paramatma lo Gaandu Suvvar sumne iru...neen heldidh takshana nan opinion change agalla...,13,0.0,0.375,0.375,0.625,0.75,False,high
+Mixed feelings,Yelru mobile nalli nodidare theater hogi nodrapoa plz,8,0.0,0.625,0.625,0.375,0.75,False,high
+Negative,Louda cinema director pyscho channagiro cinema ending allii haal mad da,11,0.0,0.4545,0.4545,0.5455,0.9091,False,high
+Negative,Madolla because promotion asten madilla making kgf ginta dull ede,10,0.0,0.6,0.6,0.4,0.8,False,high
+Negative,Disappoint agide song keli Ishtu hype kottu song bidbardu,9,0.0,0.5,0.5,0.5,1.0,False,high
+Negative,12 dislikes by gandu nanmakalu,5,0.0,0.5,0.5,0.5,1.0,False,high
+Positive,Estu sari nodudru samadhana aagthilla.... Awesome song,7,0.0,0.6,0.6,0.4,0.8,False,high
+Mixed feelings,Ee song ge dislike yakro madtira istond chanagide making,9,0.0,0.5556,0.5556,0.4444,0.8889,False,high
+Positive,Waiting for the film.....ನೋಡಲು ಕಾತುರನಾಗಿದ್ದೇನೆ,5,0.4,0.0,0.4,0.6,0.8,False,high
+Positive,D Boss abimanigala kadeyinda avne srimannarayana chitrakke all the best,10,0.0,0.5556,0.5556,0.4444,0.8889,False,high
+Positive,KGF 2 songs bartave with bang bang BGMs.,8,0.0,0.4286,0.4286,0.5714,0.8571,False,high
+Positive,Entha movie multi language barbeku,5,0.0,0.4,0.4,0.6,0.8,False,high
+Negative,Kelv bvc galu ..nam India dalli eddare Anna...a bvc galu chna ap use madthare anna,15,0.0,0.6923,0.6923,0.3077,0.6154,False,high
+Positive,@Poojari Avinash pls nivelru movie na promote madi. Insta & fb alli promote madi,14,0.0,0.4545,0.4545,0.5455,0.9091,False,high
+Positive,smile madalu nodi joking vdo,5,0.0,0.6,0.6,0.4,0.8,False,high
+Positive,Yaro guru ninu super,4,0.0,0.5,0.5,0.5,1.0,False,high
+Positive,Yen  comedy guru  gulaab jamunu,5,0.0,0.4,0.4,0.6,0.8,False,high
+Negative,First adu yava app anta tilkolo g m n,9,0.0,0.4444,0.4444,0.5556,0.8889,False,high
+Positive,Na gentleman tiktok banu  super guru,6,0.0,0.3333,0.3333,0.6667,0.6667,False,high
+Positive,Enu guru song saktha kick kodtha edae..super ASN,8,0.0,0.5714,0.5714,0.4286,0.8571,False,high
+Positive,Great sir nivu,3,0.0,0.3333,0.3333,0.6667,0.6667,True,high
+Positive,Anna nevu super,3,0.0,0.3333,0.3333,0.6667,0.6667,True,high
+Positive,One time ge songe artha agolla. . Pakka bt kelbeku ennond sari ansatte. . .,15,0.0,0.6364,0.6364,0.3636,0.7273,False,high
+Positive,idu charithre srishtisuva comment guru..,5,0.0,0.6,0.6,0.4,0.8,False,high
+Positive,Move chenagi irli hero ge olledagli  tumbane kasta padta I dareP,11,0.0,0.6364,0.6364,0.3636,0.7273,False,high
+Negative,Sir kfi ha kochkondu ogtayda.,5,0.0,0.6,0.6,0.4,0.8,False,high
+Positive,Togari tippa keli tumba santosh ayita matte old is gold antaralll adu nija ayita,14,0.0,0.6923,0.6923,0.3077,0.6154,False,high
+Positive,Re release madi,3,0.0,0.3333,0.3333,0.6667,0.6667,True,high
+Negative,Vijayprakash sir yavagin haage the bestbut malayalam version voice maathra sakkatth ista aythu,13,0.0,0.6154,0.6154,0.3846,0.7692,False,high
+Negative,Super hero prajval devraj I like I love hero but avara time sari ila adke avara movie hit agtila but ivarige vale director sigbeku benki hero prajval I love boss E cinema adru nimge success tandu kodali..devru idane munde nugta eri boss god bless you,45,0.0,0.4,0.4,0.6,0.8,False,high
+Positive,E film kgf level ig erbhodu annoru like maadi adunnu meersbhodu annoru comment maadi ...,15,0.0,0.6429,0.6429,0.3571,0.7143,False,high
+Positive,Kerala antha helbedi bro. Adu kuda jathi na nodutte. Agi hechagi nodutte nan sutta muttalina example nalli heltha idini... I have many Malli frnds so,25,0.0,0.619,0.619,0.381,0.7619,False,high
+Negative,Namma janagalige taste illa avrige fighting,6,0.0,0.6667,0.6667,0.3333,0.6667,False,high
+Negative,@AJITH S SHETTY appreciate madtaidane guru,6,0.0,0.4,0.4,0.6,0.8,False,high
+Negative,Only d boss ok jai Kannada all movies hmmm kotigobba bittu hehehe,12,0.0,0.4,0.4,0.6,0.8,False,high
+Positive,Ee song nodtha eroru ennomme trailer nodi.....,7,0.0,0.6667,0.6667,0.3333,0.6667,False,high
+Positive,Anna nivu comedy agi madila Andru yene madidru entertaining agi eruthe  keep rocking,13,0.0,0.5833,0.5833,0.4167,0.8333,False,high
+Positive,Anna thamma janpada super,4,0.0,0.5,0.5,0.5,1.0,False,high
+Positive,Nin  video delete agolla bidu bro ninge nav support madtivi innu e tara videos na mattastu madu chaina bucket galige tale kediskobeda,22,0.0,0.5455,0.5455,0.4545,0.9091,False,high
+Positive,Chennagi ede song super,4,0.0,0.5,0.5,0.5,1.0,False,high
+Negative,RSS avaru thumba danger. Avara bhagge ondu episode maadi sir,10,0.0,0.6667,0.6667,0.3333,0.6667,False,high
+Negative,Promotion kammi aytu bro,4,0.0,0.5,0.5,0.5,1.0,False,high
+Positive,Fan war bittu dhayvittu ee movie ge support madrappa nam kannada movie Hollywood level ge barli.,16,0.0,0.3333,0.3333,0.6667,0.6667,False,high
+Positive,Wow hand's up 🤟  ಚರಿತ್ರೆ ಸೃಷ್ಟಿಸೊ ಅವತಾರ super,8,0.4286,0.0,0.4286,0.5714,0.8571,False,high
+Negative,Dana alla ok,3,0.0,0.3333,0.3333,0.6667,0.6667,True,high
+Mixed feelings,Nev helerodu tappe illa sir,5,0.0,0.6,0.6,0.4,0.8,False,high
+Positive,super guru idhu actually chennagirodhu,5,0.0,0.4,0.4,0.6,0.8,False,high
+Positive,Kannada industry nintirode Yash,4,0.0,0.3333,0.3333,0.6667,0.6667,True,high
+Negative,Yavano avnu sade nan maga tiktok eno kitthakide anthane.. Modlu tilkondu maathado... Bro next video aaa sade nan magan mele maadi...its  request plz bro.. And loved ur video,28,0.0,0.4545,0.4545,0.5455,0.9091,False,high
+Positive,Super guru.........ji kannadiga,3,0.0,0.5,0.5,0.5,1.0,True,high
+Positive,Film hit ahagokai e tharadha song irbaiku,7,0.0,0.4286,0.4286,0.5714,0.8571,False,high
+Mixed feelings,Thika urkondu dislike madbittidira already..nSuper song   #ASN .nNam Shettru steps anthu 🤩,12,0.0,0.6667,0.6667,0.3333,0.6667,False,high
+Mixed feelings,Marketing sariyaagi maadrappa istondu olle movie ge ingadre henge very imp marketing,12,0.0,0.5,0.5,0.5,1.0,False,high
+Positive,Rj naagraj naan bigg fan...neeu prathvi aadru naan nim Rj fan ...aadi age kushi aitu noodi ...film exlnt ee year supr move ...heroin sa acting exlnt . . whole team ....suprb,31,0.0,0.6957,0.6957,0.3043,0.6087,False,high
+Mixed feelings,Upendra tara ideas eroru PM,5,0.0,0.5,0.5,0.5,1.0,False,high
+Negative,@Nandi Parthasarathi nimma yashini boobs gojjekesari acting ge Oscar award fix,11,0.0,0.4444,0.4444,0.5556,0.8889,False,high
+Positive,Kannadada saaalugalu sakkatagiddave all the best natayana...,7,0.0,0.4,0.4,0.6,0.8,False,high
+Positive,ಈ ಹಾಳಾದ ಕೋರೋನ ವೈರಸ್ ಬಂದು ದಿಯಾ ಲವ್ ಮಾಕಟೈಲ್ ಚಿತ್ರಗಳಿಗೆ ತುಂಬಾ ನಷ್ಟ ಉಂಟಾಗಿದೆ...but Don't worry u get best reviews.. All the best for ur nxt movies,25,0.5217,0.0435,0.5652,0.4348,0.8696,False,high
+Mixed feelings,Sariyaaagi bydidira... Actually Olle Olle kelsa madidare app ban maadi.. I hate tik tok,14,0.0,0.5556,0.5556,0.4444,0.8889,False,high
+Positive,Kannada intha Telugu Alli song Chang idhe,7,0.0,0.5,0.5,0.5,1.0,False,high
+Positive,Neevenu promotion maadilla andru Kannada dalli navu guarantee nodtivi........north Alli promote madrappa .......Valle market idae Alli enta films gae ........madrappa 50 crore plus  min collection agutte,26,0.0,0.5789,0.5789,0.4211,0.8421,False,high
+Positive,Mast hadu super,3,0.0,0.3333,0.3333,0.6667,0.6667,True,high
+Positive,Superrrrrrrr  agi heliya Anna tq u so mach video,9,0.0,0.4286,0.4286,0.5714,0.8571,False,high
+Positive,Nim dhesh bakthi ge Sallut bro I like you,9,0.0,0.375,0.375,0.625,0.75,False,high
+Positive,No comments. Kambani kannadi iddanthe,5,0.0,0.5,0.5,0.5,1.0,False,high
+Positive,@Kiccha Vitthal papa bidu guru amele athbitre kashta attar flop ago movie ge support madtavre,15,0.0,0.4286,0.4286,0.5714,0.8571,False,high
+Positive,En sir lyrics. Superb,4,0.0,0.3333,0.3333,0.6667,0.6667,True,high
+Positive,Editing yar guru 🤩,4,0.0,0.3333,0.3333,0.6667,0.6667,True,high
+Positive,Eli eddeli boss nim time bandide,6,0.0,0.5,0.5,0.5,1.0,False,high
+Positive,15 days inda bari dia movie status akthaedini bro awesome movie bro,12,0.0,0.3636,0.3636,0.6364,0.7273,False,high
+Positive,Nin voice super anna continue instalgram rost rost,8,0.0,0.5,0.5,0.5,1.0,False,high
+Negative,@ᴍᴏᴠɪᴇs sᴛᴜᴅɪᴏ yen bekaadru baiko....naan yaav hero blind fan alla.... nin thara....,12,0.0,0.3333,0.3333,0.6667,0.6667,False,high
+Positive,Super  jai kiccha sudeep anna,5,0.0,0.6,0.6,0.4,0.8,False,high
+Positive,Bega release madi sir... Hindi and other languages alli MASALA films na nodtidare jana ( actually khaali hoditide  ). E film annu release madi,24,0.0,0.4211,0.4211,0.5789,0.8421,False,high
+Positive,super ತೊಗರಿ ತಿಪ್ಪ,3,0.6667,0.0,0.6667,0.3333,0.6667,True,high
+Negative,Dislike madiroeu pakka Hollywood heroine fans,6,0.0,0.4,0.4,0.6,0.8,False,high
+Positive,My favorite song in 2019 is Taaja samachara   ಸಾಹಿತ್ಯ ಪ್ರಿಯರೇ ಒಮ್ಮೆ ಈ ಹಾಡು ಕೇಳಿದ್ರೆ ಕೇಳ್ತಾನೆ ಇರ್ಬೇಕು ಅನ್ಸುತ್ತೆ....  Everybody watch this,20,0.5294,0.0588,0.5882,0.4118,0.8235,False,high
+Positive,En guru song nHowdoo huliyaaaa,5,0.0,0.5,0.5,0.5,1.0,False,high
+Negative,@Praveen Kumar caste dog spotted bale pan yar nimammana dagar nau thane d boss fans nimammana dagar madiddu husharagi nodkoli thunne asege yar jotenadru odihodaalu 🤣🤪,26,0.0,0.6667,0.6667,0.3333,0.6667,False,high
+Negative,Nan sigapu manithan remake.,4,0.0,0.5,0.5,0.5,1.0,False,high
+Positive,Sir movie nodidini idhu.  Ithara film en chennagide sir..compare to love mocktail,12,0.0,0.5455,0.5455,0.4545,0.9091,False,high
+Negative,Nikistark x promotion chennagi idrunu bere language ge jaathi priority kodtare....nam state li kannada movie ge support madalla distributors..,19,0.0,0.3333,0.3333,0.6667,0.6667,False,high
+Negative,YouTube subscriber at list 5lack kooda Ella yelli reach agutte T series nalli bittidre 10m agirodu avraddu tappu,18,0.0,0.5333,0.5333,0.4667,0.9333,False,high
+Positive,Hats off bro  ಕರೆಕ್ಟಾಗಿ ಹೇಳಿದ್ದೀರ ಬ್ರೋ,6,0.5,0.0,0.5,0.5,1.0,False,high
+Mixed feelings,Bari telgu tamil movie nodthira ee thara movie nodi,9,0.0,0.6667,0.6667,0.3333,0.6667,False,high
+Positive,Booking start  ಮಾಡಿ,3,0.3333,0.0,0.3333,0.6667,0.6667,True,high
+Positive,En guru song akkan idu song Andre akkan navgothalla,9,0.0,0.625,0.625,0.375,0.75,False,high
+Negative,Waste of tym tiktok ban madbidbek,6,0.0,0.5,0.5,0.5,1.0,False,high
+Positive,Sir neev adthidda game yavdu,5,0.0,0.6,0.6,0.4,0.8,False,high
+Positive,sakath dance performance,3,0.0,0.3333,0.3333,0.6667,0.6667,True,high
