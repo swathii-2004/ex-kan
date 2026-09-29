@@ -19,6 +19,11 @@ interface Span {
  * this does a greedy longest-match-first scan rather than relying on index data.
  * A token appearing more than once in the text will have all its occurrences
  * highlighted, which is a known simplification of this approach.
+ *
+ * Adjacent subword fragments of the same word (e.g. "che" + "na" + "gilla", all
+ * flagged as top tokens) are merged into a single span here, so the rendered text
+ * stays one continuous word with one highlight overlay — not several separately-
+ * padded <mark> chunks that visually look like "che na gilla" with spaces inserted.
  */
 function buildSpans(text: string, words: string[], scores: number[]): Span[] {
   const candidates = words
@@ -26,13 +31,13 @@ function buildSpans(text: string, words: string[], scores: number[]): Span[] {
     .filter((c) => c.word.trim().length > 0)
     .sort((a, b) => b.word.length - a.word.length)
 
-  const spans: Span[] = []
+  const rawSpans: Span[] = []
   let cursor = 0
 
   while (cursor < text.length) {
     const match = candidates.find((c) => text.startsWith(c.word, cursor))
     if (match) {
-      spans.push({ content: match.word, score: match.score })
+      rawSpans.push({ content: match.word, score: match.score })
       cursor += match.word.length
     } else {
       const next = candidates
@@ -40,12 +45,23 @@ function buildSpans(text: string, words: string[], scores: number[]): Span[] {
         .filter((idx) => idx !== -1)
         .sort((a, b) => a - b)[0]
       const end = next === undefined ? text.length : next
-      spans.push({ content: text.slice(cursor, end) })
+      rawSpans.push({ content: text.slice(cursor, end) })
       cursor = end
     }
   }
 
-  return spans
+  const merged: Span[] = []
+  for (const span of rawSpans) {
+    const prev = merged[merged.length - 1]
+    if (prev && prev.score !== undefined && span.score !== undefined) {
+      prev.content += span.content
+      prev.score = Math.abs(span.score) > Math.abs(prev.score) ? span.score : prev.score
+    } else {
+      merged.push({ ...span })
+    }
+  }
+
+  return merged
 }
 
 export function HighlightedText({ text, words, scores, prediction }: HighlightedTextProps) {
