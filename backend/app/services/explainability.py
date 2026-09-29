@@ -54,6 +54,12 @@ def _predict(text: str) -> tuple[str, float]:
     return LABELS[idx], float(probs[idx])
 
 
+def predict(text: str) -> tuple[str, float]:
+    """Public PredictFn-shaped wrapper around the real trained model, for use as the
+    `model` callable passed to faithfulness.deletion_test/insertion_test."""
+    return _predict(text)
+
+
 def _rank_tokens(pairs: list[tuple[str, float]], tokenizer: AutoTokenizer) -> list[tuple[str, float]]:
     special = set(tokenizer.all_special_tokens)
     cleaned = [
