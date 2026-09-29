@@ -16,6 +16,17 @@ CONFIDENCE_DROP_THRESHOLD = 0.2
 # the original prediction to count as faithful — the words were sufficient on their own.
 CONFIDENCE_RETENTION_THRESHOLD = 0.6
 
+# Length-proportional top-N: a flat N touches a much larger fraction of short
+# sentences than long ones, mechanically biasing deletion/insertion against longer
+# text independent of explanation quality (see PROJECT_ROADMAP.md Phase 4).
+TOP_N_FRACTION = 0.25
+TOP_N_MIN = 3
+TOP_N_MAX = 10
+
+
+def adaptive_top_n(word_count: int) -> int:
+    return max(TOP_N_MIN, min(TOP_N_MAX, round(word_count * TOP_N_FRACTION)))
+
 
 @dataclass
 class DeletionResult:
