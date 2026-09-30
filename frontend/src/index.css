@@ -314,6 +314,52 @@ button {
   border: 1px solid var(--border);
 }
 
+.explanation-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+@media (min-width: 720px) {
+  .explanation-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.explanation-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.explanation-summary {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--ink-soft);
+}
+
+.toggle-row {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.btn-toggle {
+  background: var(--paper-raised);
+  color: var(--teal);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.6rem 1.25rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-toggle:hover {
+  background: var(--teal-soft);
+}
+
 /* --- Dashboard screen --- */
 
 .metric-cards {

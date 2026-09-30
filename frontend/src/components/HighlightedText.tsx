@@ -5,6 +5,7 @@ interface HighlightedTextProps {
   words: string[]
   scores: number[]
   prediction: 'distress' | 'not-distress'
+  method?: string
 }
 
 interface Span {
@@ -13,58 +14,54 @@ interface Span {
 }
 
 /**
- * Highlights SHAP's top tokens inline within the original text. SHAP's tokens are
- * exact substrings of `text` (subword-level, sometimes with trailing whitespace
- * attached), but /explain returns them unordered-by-position with no offsets — so
- * this does a greedy longest-match-first scan rather than relying on index data.
- * A token appearing more than once in the text will have all its occurrences
- * highlighted, which is a known simplification of this approach.
- *
- * Adjacent subword fragments of the same word (e.g. "che" + "na" + "gilla", all
- * flagged as top tokens) are merged into a single span here, so the rendered text
- * stays one continuous word with one highlight overlay — not several separately-
- * padded <mark> chunks that visually look like "che na gilla" with spaces inserted.
+ * Highlights a method's (SHAP or LIME) top tokens inline within the original text.
+ * These tokens are exact substrings of `text` (subword-level, sometimes with
+ * leading/trailing whitespace attached), but /explain returns them unordered — no
+ * offsets, and not necessarily adjacent in ranked-by-importance order either. So
+ * this reconstructs whole words from the ORIGINAL TEXT first (splitting on
+ * whitespace), then colors each whole word if any of its subword fragments
+ * (e.g. "ag" + "ti" + "de", in any order, even with an unscored fragment like
+ * "de" itself sitting in between) appear as a substring of it — one clean
+ * highlight per word, using the strongest-magnitude matching fragment's score.
+ * A word containing no matching fragment (or a token appearing in more than one
+ * word) is handled the same way every occurrence is: matched independently.
  */
 function buildSpans(text: string, words: string[], scores: number[]): Span[] {
   const candidates = words
-    .map((word, i) => ({ word, score: scores[i] }))
-    .filter((c) => c.word.trim().length > 0)
-    .sort((a, b) => b.word.length - a.word.length)
+    .map((word, i) => ({ word: word.trim(), score: scores[i] }))
+    .filter((c) => c.word.length > 0)
 
-  const rawSpans: Span[] = []
-  let cursor = 0
+  const chunks = text.match(/\S+|\s+/g) ?? []
 
-  while (cursor < text.length) {
-    const match = candidates.find((c) => text.startsWith(c.word, cursor))
-    if (match) {
-      rawSpans.push({ content: match.word, score: match.score })
-      cursor += match.word.length
-    } else {
-      const next = candidates
-        .map((c) => text.indexOf(c.word, cursor))
-        .filter((idx) => idx !== -1)
-        .sort((a, b) => a - b)[0]
-      const end = next === undefined ? text.length : next
-      rawSpans.push({ content: text.slice(cursor, end) })
-      cursor = end
+  return chunks.map((chunk) => {
+    if (/^\s/.test(chunk)) {
+      return { content: chunk }
     }
-  }
-
-  const merged: Span[] = []
-  for (const span of rawSpans) {
-    const prev = merged[merged.length - 1]
-    if (prev && prev.score !== undefined && span.score !== undefined) {
-      prev.content += span.content
-      prev.score = Math.abs(span.score) > Math.abs(prev.score) ? span.score : prev.score
-    } else {
-      merged.push({ ...span })
+    let bestScore: number | undefined
+    for (const c of candidates) {
+      if (chunk.includes(c.word) && (bestScore === undefined || Math.abs(c.score) > Math.abs(bestScore))) {
+        bestScore = c.score
+      }
     }
-  }
-
-  return merged
+    return bestScore === undefined ? { content: chunk } : { content: chunk, score: bestScore }
+  })
 }
 
-export function HighlightedText({ text, words, scores, prediction }: HighlightedTextProps) {
+/**
+ * The same merged whole-word spans HighlightedText renders, but as plain
+ * (word, score) pairs — for anything that needs to talk about "the words that
+ * mattered" (e.g. the plain-English summary sentence) without re-splitting
+ * subword fragments like "ag"/"ti"/"tum" that buildSpans already reassembled
+ * into "agtide" for display.
+ */
+export function getMergedWordScores(text: string, words: string[], scores: number[]): { word: string; score: number }[] {
+  return buildSpans(text, words, scores)
+    .filter((span): span is Required<Span> => span.score !== undefined)
+    .map((span) => ({ word: span.content.trim(), score: span.score }))
+    .filter((pair) => pair.word.length > 0)
+}
+
+export function HighlightedText({ text, words, scores, prediction, method = 'SHAP' }: HighlightedTextProps) {
   const spans = buildSpans(text, words, scores)
   const maxAbsScore = Math.max(0.0001, ...scores.map((s) => Math.abs(s)))
   const color = prediction === 'distress' ? '181, 84, 30' : '31, 92, 82'
@@ -80,7 +77,7 @@ export function HighlightedText({ text, words, scores, prediction }: Highlighted
           <mark
             key={i}
             style={{ backgroundColor: `rgba(${color}, ${0.15 + intensity * 0.45})` }}
-            title={`SHAP score: ${span.score.toFixed(4)}`}
+            title={`${method} score: ${span.score.toFixed(4)}`}
           >
             {span.content}
           </mark>
