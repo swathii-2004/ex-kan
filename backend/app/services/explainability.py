@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+import os
+import warnings
 from dataclasses import dataclass
 from functools import lru_cache
 from pathlib import Path
@@ -8,9 +10,25 @@ import numpy as np
 import shap
 import torch
 from lime.lime_text import LimeTextExplainer
-from transformers import AutoModelForSequenceClassification, AutoTokenizer
+from torch import nn
+from transformers import AutoModel, AutoModelForSequenceClassification, AutoTokenizer
+from transformers.modeling_outputs import SequenceClassifierOutput
 
-MODEL_PATH = Path(__file__).resolve().parents[3] / "model" / "checkpoints" / "ex_kan_model"
+_CHECKPOINTS_DIR = Path(__file__).resolve().parents[3] / "model" / "checkpoints"
+MODEL_V1_PATH = _CHECKPOINTS_DIR / "ex_kan_model"
+MODEL_V2_PATH = _CHECKPOINTS_DIR / "ex_kan_model_v2"
+# Backwards-compat alias (test_faithfulness.py only needs a MuRIL tokenizer, which is
+# identical between v1/v2, so it keeps pointing at v1).
+MODEL_PATH = MODEL_V1_PATH
+
+MURIL_BASE = "google/muril-base-cased"
+_LSTM_HIDDEN_DIM = 128
+_DROPOUT = 0.3
+
+# Which checkpoint /predict and /explain serve. v2 (MuRIL + BiLSTM) is the improved
+# model trained after v1 (a plain MuRIL/BERT fine-tune); set EX_KAN_MODEL_VERSION=v1
+# in the environment to force the older checkpoint.
+MODEL_VERSION = os.environ.get("EX_KAN_MODEL_VERSION", "v2")
 
 # The checkpoint's config has no id2label mapping (generic LABEL_0/LABEL_1), since the
 # training script didn't set one. Per PROJECT_ROADMAP.md Phase 2 ("Negative + Mixed
@@ -28,12 +46,59 @@ class ExplanationResult:
     tokens: list[tuple[str, float]]
 
 
-@lru_cache(maxsize=1)
-def _load_model() -> tuple[AutoTokenizer, AutoModelForSequenceClassification]:
-    tokenizer = AutoTokenizer.from_pretrained(MODEL_PATH)
-    model = AutoModelForSequenceClassification.from_pretrained(MODEL_PATH)
+class MurilLSTMClassifier(nn.Module):
+    """v2 architecture: MuRIL encoder -> bidirectional LSTM over the token sequence
+    -> dropout -> linear head on the concatenated final forward/backward hidden
+    states. Layer names/shapes match model_state.pt's state_dict exactly (bert.*,
+    lstm.{weight,bias}_{ih,hh}_l0[_reverse], classifier.{weight,bias})."""
+
+    def __init__(self, muril_base: str = MURIL_BASE) -> None:
+        super().__init__()
+        self.bert = AutoModel.from_pretrained(muril_base)
+        self.lstm = nn.LSTM(
+            input_size=self.bert.config.hidden_size,
+            hidden_size=_LSTM_HIDDEN_DIM,
+            batch_first=True,
+            bidirectional=True,
+        )
+        self.dropout = nn.Dropout(_DROPOUT)
+        self.classifier = nn.Linear(_LSTM_HIDDEN_DIM * 2, len(LABELS))
+
+    def forward(self, input_ids: torch.Tensor, attention_mask: torch.Tensor, **_: object) -> SequenceClassifierOutput:
+        sequence_output = self.bert(input_ids=input_ids, attention_mask=attention_mask).last_hidden_state
+        _, (hidden, _) = self.lstm(sequence_output)
+        # hidden: (num_directions, batch, hidden_dim) for a single-layer LSTM — index 0
+        # is the final forward step, index 1 the final backward step.
+        pooled = torch.cat((hidden[0], hidden[1]), dim=-1)
+        logits = self.classifier(self.dropout(pooled))
+        return SequenceClassifierOutput(logits=logits)
+
+
+def _load_v1() -> tuple[AutoTokenizer, nn.Module]:
+    tokenizer = AutoTokenizer.from_pretrained(MODEL_V1_PATH)
+    model = AutoModelForSequenceClassification.from_pretrained(MODEL_V1_PATH)
     model.eval()
     return tokenizer, model
+
+
+def _load_v2() -> tuple[AutoTokenizer, nn.Module]:
+    tokenizer = AutoTokenizer.from_pretrained(MODEL_V2_PATH)
+    model = MurilLSTMClassifier()
+    state_dict = torch.load(MODEL_V2_PATH / "model_state.pt", map_location="cpu")
+    model.load_state_dict(state_dict)
+    model.eval()
+    return tokenizer, model
+
+
+@lru_cache(maxsize=1)
+def _load_model() -> tuple[AutoTokenizer, nn.Module]:
+    if MODEL_VERSION == "v1":
+        return _load_v1()
+    try:
+        return _load_v2()
+    except Exception as exc:  # noqa: BLE001 - deliberately broad: any v2 load failure should fall back, not crash the API
+        warnings.warn(f"Failed to load v2 model ({exc!r}); falling back to v1.", stacklevel=2)
+        return _load_v1()
 
 
 def _predict_proba(texts: list[str]) -> np.ndarray:
