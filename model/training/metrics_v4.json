@@ -1,0 +1,59 @@
+{
+  "architecture": {
+    "encoder": "google/muril-base-cased",
+    "lstm_hidden": 128,
+    "bidirectional": true,
+    "dropout": 0.3,
+    "pooling": "masked_mean_over_packed_lstm_outputs"
+  },
+  "chosen_by": "validation F1",
+  "seed": 33,
+  "val": {
+    "accuracy": 0.7891304347826087,
+    "f1": 0.6978193146417445
+  },
+  "test_overall": {
+    "accuracy": 0.7521739130434782,
+    "precision": 0.6687116564417178,
+    "recall": 0.6449704142011834,
+    "f1": 0.6566265060240963
+  },
+  "test_per_bucket": {
+    "low": {
+      "n": 257,
+      "accuracy": 0.7859922178988327
+    },
+    "medium": {
+      "n": 51,
+      "accuracy": 0.5882352941176471
+    },
+    "high": {
+      "n": 128,
+      "accuracy": 0.71875
+    },
+    "native_script": {
+      "n": 24,
+      "accuracy": 0.9166666666666666
+    }
+  },
+  "all_validation_runs": [
+    {
+      "tag": "base",
+      "seed": 11,
+      "val_acc": 0.763,
+      "val_f1": 0.6766
+    },
+    {
+      "tag": "base",
+      "seed": 22,
+      "val_acc": 0.7783,
+      "val_f1": 0.6928
+    },
+    {
+      "tag": "base",
+      "seed": 33,
+      "val_acc": 0.7891,
+      "val_f1": 0.6978
+    }
+  ]
+}
