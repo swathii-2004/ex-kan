@@ -11,12 +11,14 @@ import shap
 import torch
 from lime.lime_text import LimeTextExplainer
 from torch import nn
+from torch.nn.utils.rnn import pack_padded_sequence, pad_packed_sequence
 from transformers import AutoModel, AutoModelForSequenceClassification, AutoTokenizer
 from transformers.modeling_outputs import SequenceClassifierOutput
 
 _CHECKPOINTS_DIR = Path(__file__).resolve().parents[3] / "model" / "checkpoints"
 MODEL_V1_PATH = _CHECKPOINTS_DIR / "ex_kan_model"
 MODEL_V2_PATH = _CHECKPOINTS_DIR / "ex_kan_model_v2"
+MODEL_V4_PATH = _CHECKPOINTS_DIR / "ex_kan_model_v4"
 # Backwards-compat alias (test_faithfulness.py only needs a MuRIL tokenizer, which is
 # identical between v1/v2, so it keeps pointing at v1).
 MODEL_PATH = MODEL_V1_PATH
@@ -25,10 +27,18 @@ MURIL_BASE = "google/muril-base-cased"
 _LSTM_HIDDEN_DIM = 128
 _DROPOUT = 0.3
 
-# Which checkpoint /predict and /explain serve. v2 (MuRIL + BiLSTM) is the improved
-# model trained after v1 (a plain MuRIL/BERT fine-tune); set EX_KAN_MODEL_VERSION=v1
-# in the environment to force the older checkpoint.
-MODEL_VERSION = os.environ.get("EX_KAN_MODEL_VERSION", "v2")
+# Which checkpoint /predict and /explain serve. v4 (padding-safe MuRIL + BiLSTM) is
+# the current default; v2 has a known padding-dependence bug (its forward pass runs
+# the LSTM over raw padding and takes the final hidden state, so output changes with
+# batch composition) and v1 is the original plain MuRIL/BERT fine-tune. Set
+# EX_KAN_MODEL_VERSION=v1 or v2 in the environment to force an older checkpoint.
+MODEL_VERSION = os.environ.get("EX_KAN_MODEL_VERSION", "v4")
+
+# v4 is the model the explanation study is built on, so a silent fallback to a
+# different checkpoint would make /predict and /explain quietly serve the wrong
+# model's behavior. If v4 fails to load, _load_model() raises by default; set
+# EX_KAN_ALLOW_FALLBACK=1 to restore the old silent-fallback-to-v1 behavior.
+EX_KAN_ALLOW_FALLBACK = os.environ.get("EX_KAN_ALLOW_FALLBACK", "0") == "1"
 
 # The checkpoint's config has no id2label mapping (generic LABEL_0/LABEL_1), since the
 # training script didn't set one. Per PROJECT_ROADMAP.md Phase 2 ("Negative + Mixed
@@ -74,6 +84,37 @@ class MurilLSTMClassifier(nn.Module):
         return SequenceClassifierOutput(logits=logits)
 
 
+class MurilLSTMPackedClassifier(nn.Module):
+    """v4 architecture: same MuRIL + BiLSTM + linear head shape as v2 (so the
+    state_dict's keys/shapes match), but padding-safe where v2 was not — the
+    sequence is packed by its real length before the LSTM (pack_padded_sequence /
+    pad_packed_sequence) and pooled via an attention-mask-weighted mean over the
+    unpacked outputs, instead of v2's bug of running the LSTM over raw padding and
+    taking its final hidden state (see the padding-dependence test in PROJECT_ROADMAP)."""
+
+    def __init__(self, muril_base: str = MURIL_BASE) -> None:
+        super().__init__()
+        self.bert = AutoModel.from_pretrained(muril_base)
+        self.lstm = nn.LSTM(
+            input_size=self.bert.config.hidden_size,
+            hidden_size=_LSTM_HIDDEN_DIM,
+            batch_first=True,
+            bidirectional=True,
+        )
+        self.dropout = nn.Dropout(_DROPOUT)
+        self.classifier = nn.Linear(_LSTM_HIDDEN_DIM * 2, len(LABELS))
+
+    def forward(self, input_ids: torch.Tensor, attention_mask: torch.Tensor, **_: object) -> SequenceClassifierOutput:
+        seq = self.bert(input_ids=input_ids, attention_mask=attention_mask).last_hidden_state
+        lengths = attention_mask.sum(1).cpu()
+        packed = pack_padded_sequence(seq, lengths, batch_first=True, enforce_sorted=False)
+        out, _ = pad_packed_sequence(self.lstm(packed)[0], batch_first=True, total_length=seq.size(1))
+        mask = attention_mask.unsqueeze(-1).to(out.dtype)
+        pooled = (out * mask).sum(1) / mask.sum(1).clamp(min=1)
+        logits = self.classifier(self.dropout(pooled))
+        return SequenceClassifierOutput(logits=logits)
+
+
 def _load_v1() -> tuple[AutoTokenizer, nn.Module]:
     tokenizer = AutoTokenizer.from_pretrained(MODEL_V1_PATH)
     model = AutoModelForSequenceClassification.from_pretrained(MODEL_V1_PATH)
@@ -90,15 +131,34 @@ def _load_v2() -> tuple[AutoTokenizer, nn.Module]:
     return tokenizer, model
 
 
+def _load_v4() -> tuple[AutoTokenizer, nn.Module]:
+    tokenizer = AutoTokenizer.from_pretrained(MODEL_V4_PATH)
+    model = MurilLSTMPackedClassifier()
+    state_dict = torch.load(MODEL_V4_PATH / "model_state.pt", map_location="cpu")
+    model.load_state_dict(state_dict)  # strict=True (default): any shape/key mismatch raises
+    model.eval()
+    return tokenizer, model
+
+
 @lru_cache(maxsize=1)
 def _load_model() -> tuple[AutoTokenizer, nn.Module]:
     if MODEL_VERSION == "v1":
         return _load_v1()
+    if MODEL_VERSION == "v2":
+        try:
+            return _load_v2()
+        except Exception as exc:  # noqa: BLE001 - deliberately broad: any v2 load failure should fall back, not crash the API
+            warnings.warn(f"Failed to load v2 model ({exc!r}); falling back to v1.", stacklevel=2)
+            return _load_v1()
+    # v4 (default): fail loudly on load failure rather than silently serving a
+    # different model's predictions — see EX_KAN_ALLOW_FALLBACK above.
     try:
-        return _load_v2()
-    except Exception as exc:  # noqa: BLE001 - deliberately broad: any v2 load failure should fall back, not crash the API
-        warnings.warn(f"Failed to load v2 model ({exc!r}); falling back to v1.", stacklevel=2)
-        return _load_v1()
+        return _load_v4()
+    except Exception as exc:
+        if EX_KAN_ALLOW_FALLBACK:
+            warnings.warn(f"Failed to load v4 model ({exc!r}); falling back to v1 (EX_KAN_ALLOW_FALLBACK=1).", stacklevel=2)
+            return _load_v1()
+        raise
 
 
 def _predict_proba(texts: list[str]) -> np.ndarray:
