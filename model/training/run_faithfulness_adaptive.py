@@ -1,3 +1,4 @@
+import argparse
 import csv
 import json
 import sys
@@ -8,13 +9,13 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(REPO_ROOT / "backend"))
 
-from app.services.explainability import _load_model, predict  # noqa: E402
+from app.services.explainability import MODEL_VERSION, _load_model, predict  # noqa: E402
 from app.services.faithfulness import deletion_test, faithfulness_score, insertion_test  # noqa: E402
 
 PROCESSED = REPO_ROOT / "data" / "processed"
-INPUT_PATH = PROCESSED / "explanations_output.csv"
-OUTPUT_PATH = PROCESSED / "faithfulness_results_adaptive.csv"
-FIELDNAMES = ["text", "bucket", "label", "prediction", "top_n", "lime_faithfulness_score", "shap_faithfulness_score"]
+DEFAULT_INPUT_PATH = PROCESSED / "explanations_output.csv"
+DEFAULT_OUTPUT_PATH = PROCESSED / "faithfulness_results_adaptive.csv"
+FIELDNAMES = ["text", "bucket", "label", "model_version", "prediction", "top_n", "lime_faithfulness_score", "shap_faithfulness_score"]
 PROGRESS_EVERY = 100
 
 # Length-proportional top-N: fixes the fixed-top-5 confound, where a flat N touched a
@@ -29,32 +30,50 @@ def adaptive_top_n(word_count: int) -> int:
     return max(TOP_N_MIN, min(TOP_N_MAX, round(word_count * TOP_N_FRACTION)))
 
 
-def load_done() -> set[tuple[str, str]]:
-    if not OUTPUT_PATH.exists():
+def load_done(output_path: Path) -> set[tuple[str, str]]:
+    if not output_path.exists():
         return set()
-    with open(OUTPUT_PATH) as f:
-        return {(r["bucket"], r["text"]) for r in csv.DictReader(f)}
+    with open(output_path) as f:
+        rows = list(csv.DictReader(f))
+    bad_versions = {r.get("model_version") for r in rows} - {MODEL_VERSION}
+    if bad_versions:
+        raise SystemExit(
+            f"Refusing to resume {output_path}: contains model_version(s) {sorted(bad_versions)}, "
+            f"expected only {MODEL_VERSION!r}."
+        )
+    return {(r["bucket"], r["text"]) for r in rows}
 
 
-def load_input_rows() -> list[dict]:
-    with open(INPUT_PATH) as f:
+def load_input_rows(input_path: Path) -> list[dict]:
+    with open(input_path) as f:
         return list(csv.DictReader(f))
 
 
 def main() -> None:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--input", type=Path, default=DEFAULT_INPUT_PATH)
+    parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT_PATH)
+    args = parser.parse_args()
+    input_path, output_path = args.input, args.output
+
+    print(f"Active model_version: {MODEL_VERSION}", flush=True)
+    if MODEL_VERSION != "v4":
+        print(f"ABORT: MODEL_VERSION is {MODEL_VERSION!r}, not 'v4'.", flush=True)
+        sys.exit(1)
+
     tokenizer, _ = _load_model()
 
-    done = load_done()
-    all_rows = load_input_rows()
+    done = load_done(output_path)
+    all_rows = load_input_rows(input_path)
     remaining = [r for r in all_rows if (r["bucket"], r["text"]) not in done]
 
     print(f"total rows: {len(all_rows)}  already done: {len(done)}  remaining: {len(remaining)}", flush=True)
 
-    is_new_file = not OUTPUT_PATH.exists()
+    is_new_file = not output_path.exists()
     completed_this_run = 0
     start = time.time()
 
-    with open(OUTPUT_PATH, "a", newline="") as f:
+    with open(output_path, "a", newline="") as f:
         writer = csv.DictWriter(f, fieldnames=FIELDNAMES)
         if is_new_file:
             writer.writeheader()
@@ -78,6 +97,7 @@ def main() -> None:
                 "text": text,
                 "bucket": row["bucket"],
                 "label": row["label"],
+                "model_version": MODEL_VERSION,
                 "prediction": row["prediction"],
                 "top_n": top_n,
                 "lime_faithfulness_score": lime_score,
@@ -99,10 +119,10 @@ def main() -> None:
                     flush=True,
                 )
 
-    print(f"DONE: {len(done) + completed_this_run}/{len(all_rows)} total rows in {OUTPUT_PATH}", flush=True)
+    print(f"DONE: {len(done) + completed_this_run}/{len(all_rows)} total rows in {output_path}", flush=True)
 
     # --- final summary: average faithfulness score per bucket ---
-    with open(OUTPUT_PATH) as f:
+    with open(output_path) as f:
         results = list(csv.DictReader(f))
 
     by_bucket = defaultdict(lambda: {"lime": [], "shap": []})
