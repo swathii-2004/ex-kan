@@ -27,3 +27,6 @@ data/raw/*
 
 # Jupyter
 .ipynb_checkpoints/
+
+# Logs
+*.log

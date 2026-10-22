@@ -76,10 +76,10 @@ Every screen answers one question: *Analyze* = "what did you say?", *Result* = "
 
 ### Phase 0 — Foundation
 - [x] ✅ Define research topic, gap, and question
-- [x] ✅ Literature review — confirm gap is unclaimed (Chowdhury & Bahari, Banerjee et al., etc.)
+- [x] ✅ Literature review — confirm gap is unclaimed (Kawser et al. (2025), Banerjee et al., etc.)
 - [x] ✅ Source and audit base dataset (DravidianCodeMix, ~7,655 rows)
 - [x] ✅ Fix code-mix bucketing method (script % + Romanized-Kannada detection)
-- [x] ✅ Final bucket counts confirmed: Low 3,696 / Medium 1,482 / High 2,458 (via `improved_bucketer.py`, Romanized-Kannada-aware `effective_score` method)
+- [x] ✅ Final bucket counts confirmed (post contamination-audit, clean counts actually used for training): Low 3,696 / Medium 514 / High 1,280 (via `improved_bucketer.py`, Romanized-Kannada-aware `effective_score` method, then the contamination audit below)
 - [x] ✅ Evaluate and reject unusable extra datasets (DOSA, Kaggle Romanized Reviews, offenseval_dravidian)
 - [x] ✅ Obtain secondary depression-labeled dataset (Shwetha & Pushpalatha) — 240 net-new rows
 - [x] ✅ Document sentiment-as-distress-proxy justification with real citations
@@ -105,40 +105,46 @@ Every screen answers one question: *Analyze* = "what did you say?", *Result* = "
 - [x] ✅ Load and finalize bucketed dataset (train/val/test split within each bucket)
 - [x] ✅ Map sentiment labels → distress / not-distress (Negative + Mixed = distress)
 - [x] ✅ Fine-tune MuRIL for binary classification
-- [x] ✅ Evaluate baseline accuracy/F1 — FINAL (trained on fully-audited dataset: Low 3,696 + Medium 514 + High 1,280 + native-script 237): Overall accuracy=72.2%, precision=0.639, recall=0.556, F1=0.595. Per-bucket: Low acc=0.767/f1=0.577 (n=257), Medium acc=0.608/f1=0.655 (n=51), High acc=0.656/f1=0.551 (n=128). Native-script (informational, n=24): acc=0.833. Two training runs on this dataset produced similar results (F1 0.632 and 0.595), confirming stability. This is the final model used for XAI faithfulness experiments.
+- [x] ✅ Evaluate baseline accuracy/F1 — v1 baseline (superseded by v4) (trained on fully-audited dataset: Low 3,696 + Medium 514 + High 1,280 + native-script 237): Overall accuracy=72.2%, precision=0.639, recall=0.556, F1=0.595. Per-bucket: Low acc=0.767/f1=0.577 (n=257), Medium acc=0.608/f1=0.655 (n=51), High acc=0.656/f1=0.551 (n=128). Native-script (informational, n=24): acc=0.833. Two training runs on this dataset produced similar results (F1 0.632 and 0.595), confirming stability.
 - [x] ✅ Save trained model checkpoint (`model/checkpoints/ex_kan_model`, confirmed gitignored)
 
-> **v2 model (updated 2026-10-03):** v2 model (MuRIL+LSTM hybrid, per guide's suggestion referencing Kawser et al. 2025) is now the default active model (EX_KAN_MODEL_VERSION=v2), with automatic fallback to v1 if loading fails. Verified working end-to-end through /predict and /explain, including SHAP/LIME explanation generation on the new architecture. v2 results: 77.6% accuracy, F1=0.694 (up from v1's 72.2%/0.595), with the largest gain in the Medium bucket (60.8% → 72.5%).
+> **v2 model (2026-10-03, SUPERSEDED by v4 — see below):** v2 model (MuRIL+LSTM hybrid, per guide's suggestion referencing Kawser et al. 2025) was briefly the default active model (EX_KAN_MODEL_VERSION=v2), with automatic fallback to v1 if loading fails. v2 results: 77.6% accuracy, F1=0.694 (up from v1's 72.2%/0.595), with the largest gain in the Medium bucket (60.8% → 72.5%). v2 was dropped after discovering its LSTM ran over raw padded sequences with no masking, making its output depend on batch composition (padding length), not just the input text: max change in P(distress) across batch compositions was 0.466, with 1 of 20 test sentences flipping its predicted class. v2's checkpoint and code are kept, untouched, for reference only — it is not used anywhere in the pipeline.
+>
+> **v4 model (current default, EX_KAN_MODEL_VERSION=v4):** MuRIL+BiLSTM+Linear(256,2), using `pack_padded_sequence`/`pad_packed_sequence` plus attention-mask-weighted mean pooling — a padding-safe redesign of v2's architecture. Same padding-dependence test as above: max change in P(distress) across batch compositions is 0.000025, with 0 of 20 flips — confirms the bug is fixed. Loading failures raise loudly by default (set `EX_KAN_ALLOW_FALLBACK=1` to restore silent fallback to v1). Results (`model/training/metrics_v4.json`): test accuracy 75.2%, F1=0.657. Per-bucket test accuracy: Low 78.6%, Medium 58.8%, High 71.9%, native-script 91.7% (informational). This is the model actually served by `/predict` and `/explain` (the Dashboard reads the v4 faithfulness results file).
+>
+> **XLM-R base (evaluated, not integrated):** evaluated in Colab as an alternative encoder — mean validation F1 0.706 vs. 0.689 for MuRIL v4, test accuracy 0.774. Not integrated into the backend; kept as a note for future work, not a claim about the deployed model.
 
 ### Phase 3 — Explainability Pipeline
 - [x] ✅ Integrate SHAP on trained model (start with 5–10 samples to validate pipeline)
 - [x] ✅ Integrate LIME on trained model, compare against SHAP output — Explainability pipeline finalized: SHAP (max_evals='auto', capped at 64 above 10 subword tokens) and LIME (whitespace-based split_expression for Kannada-aware tokenization, adaptive num_samples: 150 below 15 words, 300 at/above — thresholds validated via seeded stability testing showing genuine LIME instability on long/lexically-diverse text at reduced sample counts). Combined average: ~21s/sample. Given ~10.5 hour full-dataset runtime estimate on CPU-only hardware, explanations will be run on a stratified sample (not the full 1,794-row corpus) — see next entry for sample size decision.
-- [ ] ⏳ Build word-highlighting output format (for UI display)
+- [x] ✅ Build word-highlighting output format (for UI display) — `frontend/src/components/HighlightedText.tsx`, wired into `ResultScreen.tsx` (SHAP/LIME side-by-side highlighted text + ranked word-score chips)
 
 ### Phase 4 — Faithfulness Testing (the core research step)
 - [x] ✅ Faithfulness testing pipeline built and validated (LIME whole-word + SHAP subword support, length-proportional adaptive top-N)
-- [x] ✅ Core research finding computed: U-shaped faithfulness pattern (Low highest, Medium lowest, High intermediate), robust across explanation method, threshold choice, and length-confound correction. No significant correlation between code-mix intensity and faithfulness (|r|≤0.07). This is the paper's core empirical finding — contradicts the original monotonic-decline hypothesis but represents a real, well-validated result.
+- [x] ✅ Core research finding computed (v4, length-adjusted): raw per-bucket mean faithfulness is Low > High > Medium (LIME 0.643 / 0.566 / 0.617, SHAP 0.504 / 0.449 / 0.481 for Low / Medium / High). After controlling for `log(word_count)` via clustered-SE OLS, the Medium coefficient shrinks to near zero (+0.003 LIME, −0.001 SHAP; both CIs include 0) — the raw Medium deficit is not clearly distinguishable from a length effect. Longer text lowers faithfulness within every bucket. We cannot distinguish code-mixing effects from length effects with this sample.
+>
+> **Exploratory (word-count-tertile-stratified) follow-up:** 24 comparisons (3 length tertiles × 2 model versions × 2 explainers × 2 contrasts [Medium−Low, Medium−High]), cluster-bootstrap 95% CIs, no multiplicity correction. For v4, in the shortest tertile the Medium gap is statistically significant for LIME (both Medium−Low and Medium−High), but not for SHAP (both intervals include 0); in the mid and long tertiles, none of v4's Medium contrasts are significant. For v1, the pattern is reversed: no significant Medium contrasts in the shortest tertile, but significant gaps appear in the mid and long tertiles (LIME Medium−High in both; SHAP Medium−Low and Medium−High in long texts). This finding is exploratory, not pre-specified, and should not be treated as a replicated result on its own.
 - [ ] ⏳ (Secondary) Validate findings against Shwetha's depression-labeled subset
 
 ### Phase 5 — Backend (FastAPI)
-- [ ] ⏳ Build `/predict` endpoint (text → distress/not-distress + confidence)
-- [ ] ⏳ Build `/explain` endpoint (text → SHAP/LIME highlighted words)
-- [ ] ⏳ Build `/faithfulness` endpoint (text → faithfulness score)
-- [ ] ⏳ Build `/code-mix-ratio` endpoint (text → Low/Medium/High + score)
-- [ ] ⏳ Connect endpoints to MongoDB (save each analysis to History)
-- [ ] ⏳ Build `/dashboard-stats` endpoint (aggregate faithfulness per bucket, for Dashboard page)
+- [x] ✅ Build `/predict` endpoint (text → distress/not-distress + confidence) — `backend/app/routers/predict.py`
+- [x] ✅ Build `/explain` endpoint (text → SHAP/LIME highlighted words, with live faithfulness scores) — `backend/app/routers/explain.py`
+- [ ] ⏳ Build `/faithfulness` endpoint (text → faithfulness score) — not a standalone route; faithfulness scores are currently computed inline inside `/explain`'s response (`lime_faithfulness_score`, `shap_faithfulness_score`)
+- [ ] ⏳ Build `/code-mix-ratio` endpoint (text → Low/Medium/High + score) — not a standalone route; `code_mix_bucket`/`effective_score` are returned inline from `/predict` (`app/services/code_mix.py`)
+- [ ] ⏳ Connect endpoints to MongoDB (save each analysis to History) — not started; `app/database.py` only exposes a `get_db()` helper, nothing calls it yet
+- [x] ✅ Build `/dashboard-stats` endpoint (aggregate faithfulness per bucket, for Dashboard page) — `backend/app/routers/dashboard.py`, now reads v4 faithfulness results and returns `model_version`
 
 ### Phase 6 — Frontend (React)
-- [ ] ⏳ Build Analyze screen (per prototype design)
-- [ ] ⏳ Build Result screen (prediction + highlights + gauge)
-- [ ] ⏳ Build Dashboard screen (metric cards + bar chart, live from backend)
-- [ ] ⏳ Build History screen (table from MongoDB)
-- [ ] ⏳ Connect all screens to FastAPI backend
+- [x] ✅ Build Analyze screen (per prototype design) — `frontend/src/pages/AnalyzeScreen.tsx`
+- [x] ✅ Build Result screen (prediction + highlights + gauge) — `frontend/src/pages/ResultScreen.tsx`
+- [x] ✅ Build Dashboard screen (metric cards + bar chart, live from backend) — `frontend/src/pages/DashboardScreen.tsx`
+- [ ] ⏳ Build History screen (table from MongoDB) — still a placeholder (`HistoryScreen.tsx`), not finished yet
+- [ ] ⏳ Connect all screens to FastAPI backend — Analyze, Result, and Dashboard are connected; History is not (depends on the item above)
 - [ ] ⏳ Polish styling to match approved "Lab Report" design system
 
 ### Phase 7 — Integration & Testing
-- [ ] ⏳ End-to-end test: type text → see real prediction → real explanation → real faithfulness score
-- [ ] ⏳ Verify Dashboard reflects real aggregate data, not placeholder numbers
+- [x] ✅ End-to-end test: type text → see real prediction → real explanation → real faithfulness score — `ResultScreen.tsx` calls `/predict` then `/explain`, which returns live SHAP/LIME faithfulness scores per request
+- [x] ✅ Verify Dashboard reflects real aggregate data, not placeholder numbers — `/dashboard-stats` now reads real v4 faithfulness results
 - [ ] ⏳ Bug fixes, edge cases (empty input, pure English, pure Kannada)
 
 ### Phase 8 — Research Paper
