@@ -29,4 +29,5 @@ class BucketStats(BaseModel):
 
 
 class DashboardStatsResponse(BaseModel):
+    model_version: str
     buckets: list[BucketStats]

@@ -415,6 +415,18 @@ button {
   margin-bottom: 0.4rem;
 }
 
+.key-finding__source {
+  font-size: 0.8rem;
+  font-style: italic;
+  color: var(--ink-soft);
+  margin-bottom: 0.6rem;
+}
+
+.model-version-tag {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+}
+
 .chart-card {
   margin-top: 1.5rem;
 }

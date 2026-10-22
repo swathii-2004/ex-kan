@@ -4,11 +4,15 @@ import { fetchDashboardStats, type BucketStats } from '../api/client'
 
 export function DashboardScreen() {
   const [buckets, setBuckets] = useState<BucketStats[] | null>(null)
+  const [modelVersion, setModelVersion] = useState<string | null>(null)
   const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
     fetchDashboardStats()
-      .then((res) => setBuckets(res.buckets))
+      .then((res) => {
+        setBuckets(res.buckets)
+        setModelVersion(res.model_version)
+      })
       .catch(() => setError('Could not reach /dashboard-stats. Is the API server running?'))
   }, [])
 
@@ -17,6 +21,7 @@ export function DashboardScreen() {
       <div className="page-header">
         <h1>Dashboard</h1>
         <p>Does trust in explanations hold up at scale?</p>
+        {modelVersion && <p className="model-version-tag">Model: {modelVersion}</p>}
       </div>
 
       {error && <div className="error-banner">{error}</div>}
@@ -53,14 +58,12 @@ export function DashboardScreen() {
 
           <div className="key-finding">
             <h3>Key Finding</h3>
+            <p className="key-finding__source">From the length-adjusted robustness analysis (v4)</p>
             <p>
-              Faithfulness follows a <strong>U-shaped pattern</strong>, not a monotonic
-              decline: the Medium code-mix bucket shows the lowest faithfulness of the
-              three, while Low and High are both higher and close to each other. This
-              contradicts the original hypothesis that faithfulness degrades steadily
-              as code-mixing increases — the pattern held up across explanation method
-              (LIME and SHAP), faithfulness-threshold choice, and after correcting for
-              a text-length confound in the deletion/insertion tests.
+              Mean faithfulness is lowest for the Medium bucket, but the gap shrinks to
+              about zero after adjusting for sentence length. Faithfulness falls as
+              sentences get longer in every bucket. We cannot distinguish code-mixing
+              effects from length effects with this sample.
             </p>
           </div>
         </>

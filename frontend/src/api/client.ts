@@ -24,6 +24,7 @@ export interface BucketStats {
 }
 
 export interface DashboardStatsResponse {
+  model_version: string
   buckets: BucketStats[]
 }
 

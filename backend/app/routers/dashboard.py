@@ -9,7 +9,7 @@ from app.models.schemas import BucketStats, DashboardStatsResponse
 router = APIRouter()
 
 FAITHFULNESS_PATH = (
-    Path(__file__).resolve().parents[3] / "data" / "processed" / "faithfulness_results_adaptive.csv"
+    Path(__file__).resolve().parents[3] / "data" / "processed" / "faithfulness_results_adaptive_v4.csv"
 )
 
 
@@ -17,6 +17,8 @@ FAITHFULNESS_PATH = (
 def dashboard_stats() -> DashboardStatsResponse:
     with open(FAITHFULNESS_PATH) as f:
         rows = list(csv.DictReader(f))
+
+    model_version = rows[0]["model_version"] if rows else "unknown"
 
     by_bucket: dict[str, dict[str, list[float]]] = defaultdict(lambda: {"lime": [], "shap": []})
     for r in rows:
@@ -37,4 +39,4 @@ def dashboard_stats() -> DashboardStatsResponse:
             )
         )
 
-    return DashboardStatsResponse(buckets=buckets)
+    return DashboardStatsResponse(model_version=model_version, buckets=buckets)
