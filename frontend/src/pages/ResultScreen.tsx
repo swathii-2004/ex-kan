@@ -107,6 +107,10 @@ export function ResultScreen() {
         <p>Can we trust why the model reacted the way it did?</p>
       </div>
 
+      {!explain.saved && (
+        <p className="not-saved-note">Not saved to history (database unreachable)</p>
+      )}
+
       <div className="result-grid">
         <div className="card prediction-card">
           <CodeMixBadge bucket={predict.code_mix_bucket} effectiveScore={predict.effective_score} />
