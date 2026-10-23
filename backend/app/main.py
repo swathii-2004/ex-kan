@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.database import get_db
-from app.routers import dashboard, explain, predict
+from app.routers import dashboard, explain, history, predict
 
 app = FastAPI(title="Ex-KAN API")
 
@@ -16,6 +16,7 @@ app.add_middleware(
 app.include_router(predict.router)
 app.include_router(explain.router)
 app.include_router(dashboard.router)
+app.include_router(history.router)
 
 
 @app.get("/health")

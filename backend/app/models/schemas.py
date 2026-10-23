@@ -19,6 +19,8 @@ class ExplainResponse(BaseModel):
     lime_scores: list[float]
     lime_faithfulness_score: float
     shap_faithfulness_score: float
+    saved: bool
+    history_id: str | None = None
 
 
 class BucketStats(BaseModel):
@@ -31,3 +33,28 @@ class BucketStats(BaseModel):
 class DashboardStatsResponse(BaseModel):
     model_version: str
     buckets: list[BucketStats]
+
+
+class HistoryItem(BaseModel):
+    id: str
+    created_at: str
+    text: str
+    prediction: str
+    confidence: float
+    code_mix_bucket: str
+    effective_score: float
+    lime_faithfulness_score: float
+    shap_faithfulness_score: float
+    model_version: str
+
+
+class HistoryListResponse(BaseModel):
+    items: list[HistoryItem]
+    total: int
+
+
+class HistoryDetail(HistoryItem):
+    shap_top_words: list[str]
+    shap_scores: list[float]
+    lime_top_words: list[str]
+    lime_scores: list[float]
