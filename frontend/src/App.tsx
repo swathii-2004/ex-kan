@@ -1,4 +1,5 @@
 import { Navigate, Route, Routes } from 'react-router-dom'
+import { Footer } from './components/Footer'
 import { TopNav } from './components/TopNav'
 import { AnalysisProvider } from './context/AnalysisContext'
 import { AnalyzeScreen } from './pages/AnalyzeScreen'
@@ -17,6 +18,7 @@ function App() {
         <Route path="/history" element={<HistoryScreen />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
+      <Footer />
     </AnalysisProvider>
   )
 }

@@ -41,6 +41,9 @@ export function AnalyzeScreen() {
           onChange={(e) => setText(e.target.value)}
           placeholder="e.g. Super movie guru, tumba chennagide but the story is weak"
         />
+        <p className="analyze-form__hint">
+          Works best on Kannada-English comments like those in the training data.
+        </p>
         <div className="analyze-form__footer">
           <button type="submit" className="btn-primary" disabled={loading || !text.trim()}>
             {loading ? 'Analyzing…' : 'Analyze'}

@@ -142,7 +142,28 @@ button {
   padding: 1.5rem;
 }
 
+/* --- footer --- */
+
+.app-footer {
+  border-top: 1px solid var(--border);
+  padding: 1rem 1.5rem;
+}
+
+.app-footer p {
+  max-width: 880px;
+  margin: 0 auto;
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+  text-align: center;
+}
+
 /* --- Analyze screen --- */
+
+.analyze-form__hint {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+}
 
 .analyze-form textarea {
   width: 100%;
