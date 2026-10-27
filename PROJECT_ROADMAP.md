@@ -131,21 +131,25 @@ Every screen answers one question: *Analyze* = "what did you say?", *Result* = "
 - [x] ✅ Build `/explain` endpoint (text → SHAP/LIME highlighted words, with live faithfulness scores) — `backend/app/routers/explain.py`
 - [ ] ⏳ Build `/faithfulness` endpoint (text → faithfulness score) — not a standalone route; faithfulness scores are currently computed inline inside `/explain`'s response (`lime_faithfulness_score`, `shap_faithfulness_score`)
 - [ ] ⏳ Build `/code-mix-ratio` endpoint (text → Low/Medium/High + score) — not a standalone route; `code_mix_bucket`/`effective_score` are returned inline from `/predict` (`app/services/code_mix.py`)
-- [ ] ⏳ Connect endpoints to MongoDB (save each analysis to History) — not started; `app/database.py` only exposes a `get_db()` helper, nothing calls it yet
+- [x] ✅ Connect endpoints to MongoDB (save each analysis to History) — `/explain` saves each analysis to the `analyses` collection (`backend/app/services/history.py`); `GET /history`, `GET /history/{id}`, `DELETE /history/{id}` and `DELETE /history` are in `backend/app/routers/history.py`
 - [x] ✅ Build `/dashboard-stats` endpoint (aggregate faithfulness per bucket, for Dashboard page) — `backend/app/routers/dashboard.py`, now reads v4 faithfulness results and returns `model_version`
+
+> **History (added 2026-10):** analyses are saved server-side at the end of `/explain`, using a separate MongoDB client with a 3 s server-selection timeout so a database outage cannot hang the app. If saving fails, `/explain` still returns normally with `saved=false`. Tested: wrong `MONGODB_URI` gives 503 from `/history` in about 3 s and `/explain` unaffected. The project database stores analyzed text, so use made-up sentences for demos and use Clear all afterwards.
 
 ### Phase 6 — Frontend (React)
 - [x] ✅ Build Analyze screen (per prototype design) — `frontend/src/pages/AnalyzeScreen.tsx`
 - [x] ✅ Build Result screen (prediction + highlights + gauge) — `frontend/src/pages/ResultScreen.tsx`
 - [x] ✅ Build Dashboard screen (metric cards + bar chart, live from backend) — `frontend/src/pages/DashboardScreen.tsx`
-- [ ] ⏳ Build History screen (table from MongoDB) — still a placeholder (`HistoryScreen.tsx`), not finished yet
-- [ ] ⏳ Connect all screens to FastAPI backend — Analyze, Result, and Dashboard are connected; History is not (depends on the item above)
+- [x] ✅ Build History screen (table from MongoDB) — `frontend/src/pages/HistoryScreen.tsx` lists saved analyses, reopens them on the Result page, deletes one or all, paginates, and shows loading, empty and error states
+- [x] ✅ Connect all screens to FastAPI backend — Analyze, Result, Dashboard and History are all connected
 - [ ] ⏳ Polish styling to match approved "Lab Report" design system
 
 ### Phase 7 — Integration & Testing
 - [x] ✅ End-to-end test: type text → see real prediction → real explanation → real faithfulness score — `ResultScreen.tsx` calls `/predict` then `/explain`, which returns live SHAP/LIME faithfulness scores per request
 - [x] ✅ Verify Dashboard reflects real aggregate data, not placeholder numbers — `/dashboard-stats` now reads real v4 faithfulness results
 - [ ] ⏳ Bug fixes, edge cases (empty input, pure English, pure Kannada)
+
+> **Known limitation (not a bug):** the model has two classes only (distress proxy / not-distress). Neutral or non-sentiment text is assigned to one of them unreliably, and confidence does not flag it. Evidence on held-out rows that were excluded from training ("unknown state", n=831): 53% predicted distress, compared with 16% for Positive and 65% for Negative/Mixed (validation+test). Hand-picked probes: "hi" P(distress)=0.70, "hello" 0.42, "hii how are you" 0.78. Footer disclaimer added.
 
 ### Phase 8 — Research Paper
 - [ ] ⏳ Write Introduction & Gap (mostly ready from earlier research)
