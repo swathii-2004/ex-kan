@@ -258,6 +258,57 @@ button {
   color: var(--ink-soft);
 }
 
+.input-sentence-card {
+  margin-bottom: 1.5rem;
+}
+
+.input-sentence-text {
+  white-space: pre-wrap;
+  color: var(--ink);
+}
+
+.gauge-notes {
+  margin-top: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.gauge-notes p {
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+}
+
+.faithfulness-plain {
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+  margin: -0.25rem 0 0.25rem;
+}
+
+.overall-reliability {
+  margin-bottom: 0.75rem;
+}
+
+.overall-reliability__label {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--teal);
+}
+
+.overall-reliability__meaning {
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  margin-top: 0.15rem;
+}
+
+.overall-reliability__caveat {
+  font-size: 0.75rem;
+  font-style: italic;
+  color: var(--ink-soft);
+  margin-top: 0.35rem;
+}
+
 .result-grid {
   display: grid;
   grid-template-columns: 1fr;

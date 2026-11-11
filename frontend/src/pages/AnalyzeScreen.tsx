@@ -32,7 +32,10 @@ export function AnalyzeScreen() {
     <div className="page">
       <div className="page-header">
         <h1>Analyze</h1>
-        <p>Type a Kannada-English sentence to see what the model predicts, and why.</p>
+        <p>
+          Type a Kannada-English sentence to test how trustworthy the explanation of the
+          model's prediction is.
+        </p>
       </div>
 
       <form className="analyze-form card" onSubmit={handleSubmit}>

@@ -78,6 +78,36 @@ function ExplanationSummary({
   return <p className="explanation-summary">{summary}</p>
 }
 
+type ReliabilityLabel = 'Reliable' | 'Partially reliable' | 'Unreliable'
+
+function reliabilityLabel(score: number): ReliabilityLabel {
+  if (score >= 0.6) return 'Reliable'
+  if (score >= 0.4) return 'Partially reliable'
+  return 'Unreliable'
+}
+
+const RELIABILITY_MEANING: Record<ReliabilityLabel, string> = {
+  Reliable: 'The highlighted words explain this prediction well.',
+  'Partially reliable': 'The highlighted words explain it only in part.',
+  Unreliable:
+    'The highlighted words may not be what the model relied on. The prediction itself can still be right or wrong.',
+}
+
+function OverallReliability({ limeScore, shapScore }: { limeScore: number; shapScore: number }) {
+  const combined = (limeScore + shapScore) / 2
+  const label = reliabilityLabel(combined)
+  return (
+    <div className="overall-reliability">
+      <span className="overall-reliability__label">Explanation: {label}</span>
+      <p className="overall-reliability__meaning">{RELIABILITY_MEANING[label]}</p>
+      <p className="overall-reliability__caveat">
+        Indicative bands, based on 900 test sentences. SHAP and LIME scores are not
+        directly comparable.
+      </p>
+    </div>
+  )
+}
+
 export function ResultScreen() {
   const { result } = useAnalysis()
   const [showDetails, setShowDetails] = useState(false)
@@ -107,19 +137,29 @@ export function ResultScreen() {
         <p>Can we trust why the model reacted the way it did?</p>
       </div>
 
+      <div className="card input-sentence-card">
+        <h3 style={{ fontSize: '1rem' }}>Input sentence</h3>
+        <p className="input-sentence-text">{text}</p>
+      </div>
+
       {!explain.saved && (
         <p className="not-saved-note">Not saved to history (database unreachable)</p>
       )}
 
       <div className="result-grid">
         <div className="card prediction-card">
+          <h3 style={{ fontSize: '1rem', marginBottom: '0.5rem' }}>Model prediction (proxy)</h3>
           <CodeMixBadge bucket={predict.code_mix_bucket} effectiveScore={predict.effective_score} />
           <span className={`prediction-label ${labelClass}`}>{predictionLabel}</span>
           <span className="confidence-line">confidence {(predict.confidence * 100).toFixed(1)}%</span>
         </div>
 
         <div className="card">
-          <h3 style={{ fontSize: '1rem', marginBottom: '1rem' }}>Faithfulness</h3>
+          <h3 style={{ fontSize: '1rem', marginBottom: '0.5rem' }}>Explanation reliability</h3>
+          <OverallReliability
+            limeScore={explain.lime_faithfulness_score}
+            shapScore={explain.shap_faithfulness_score}
+          />
           <FaithfulnessGauge
             limeScore={explain.lime_faithfulness_score}
             shapScore={explain.shap_faithfulness_score}
@@ -128,12 +168,22 @@ export function ResultScreen() {
             Computed live for this sentence via deletion/insertion testing — not the
             aggregate bucket average shown on the Dashboard.
           </p>
+          <div className="gauge-notes">
+            <p>This describes the explanation, not whether the person is stressed.</p>
+            <p>
+              How measured: the highlighted words were removed, then kept alone, and the
+              change in the prediction was measured.
+            </p>
+          </div>
         </div>
       </div>
 
       <div className="explanation-grid">
         <div className="card explanation-card">
           <h3 style={{ fontSize: '1rem' }}>SHAP Explanation</h3>
+          <p className="faithfulness-plain mono">
+            SHAP faithfulness: {explain.shap_faithfulness_score.toFixed(2)}
+          </p>
           <HighlightedText
             text={text}
             words={explain.shap_top_words}
@@ -151,6 +201,9 @@ export function ResultScreen() {
 
         <div className="card explanation-card">
           <h3 style={{ fontSize: '1rem' }}>LIME Explanation</h3>
+          <p className="faithfulness-plain mono">
+            LIME faithfulness: {explain.lime_faithfulness_score.toFixed(2)}
+          </p>
           <HighlightedText
             text={text}
             words={explain.lime_top_words}
