@@ -7,6 +7,13 @@ export interface PredictResponse {
   effective_score: number
 }
 
+// The API's internal prediction values ('distress' / 'not-distress') are not shown to
+// users — everywhere the UI displays the prediction, it shows the sentiment label
+// instead ('Negative' / 'Positive').
+export function predictionDisplayLabel(prediction: 'distress' | 'not-distress'): 'Negative' | 'Positive' {
+  return prediction === 'distress' ? 'Negative' : 'Positive'
+}
+
 export interface ExplainResponse {
   shap_top_words: string[]
   shap_scores: number[]

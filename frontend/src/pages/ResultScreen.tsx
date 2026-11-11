@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { predictionDisplayLabel } from '../api/client'
 import { CodeMixBadge } from '../components/CodeMixBadge'
 import { FaithfulnessGauge } from '../components/FaithfulnessGauge'
 import { getMergedWordScores, HighlightedText } from '../components/HighlightedText'
@@ -126,7 +127,7 @@ export function ResultScreen() {
   }
 
   const { text, predict, explain } = result
-  const predictionLabel = predict.prediction === 'distress' ? 'Distress' : 'Not Distress'
+  const predictionLabel = predictionDisplayLabel(predict.prediction)
   const labelClass =
     predict.prediction === 'distress' ? 'prediction-label--distress' : 'prediction-label--not-distress'
 
@@ -148,7 +149,7 @@ export function ResultScreen() {
 
       <div className="result-grid">
         <div className="card prediction-card">
-          <h3 style={{ fontSize: '1rem', marginBottom: '0.5rem' }}>Model prediction (proxy)</h3>
+          <h3 style={{ fontSize: '1rem', marginBottom: '0.5rem' }}>Sentiment prediction</h3>
           <CodeMixBadge bucket={predict.code_mix_bucket} effectiveScore={predict.effective_score} />
           <span className={`prediction-label ${labelClass}`}>{predictionLabel}</span>
           <span className="confidence-line">confidence {(predict.confidence * 100).toFixed(1)}%</span>
@@ -169,7 +170,7 @@ export function ResultScreen() {
             aggregate bucket average shown on the Dashboard.
           </p>
           <div className="gauge-notes">
-            <p>This describes the explanation, not whether the person is stressed.</p>
+            <p>This describes the explanation, not whether the prediction is correct.</p>
             <p>
               How measured: the highlighted words were removed, then kept alone, and the
               change in the prediction was measured.

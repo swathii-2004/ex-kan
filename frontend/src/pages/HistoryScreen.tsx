@@ -6,6 +6,7 @@ import {
   deleteHistoryItem,
   fetchHistory,
   fetchHistoryItem,
+  predictionDisplayLabel,
   type HistoryItem,
 } from '../api/client'
 import { useAnalysis } from '../context/AnalysisContext'
@@ -180,7 +181,7 @@ export function HistoryScreen() {
                     <span
                       className={`history-row__prediction history-row__prediction--${item.prediction}`}
                     >
-                      {item.prediction === 'distress' ? 'Distress' : 'Not Distress'}
+                      {predictionDisplayLabel(item.prediction)}
                     </span>
                     <CodeMixBadge bucket={item.code_mix_bucket} effectiveScore={item.effective_score} />
                     <span className="mono history-row__faithfulness">avg faithfulness {combined.toFixed(2)}</span>
