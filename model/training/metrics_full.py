@@ -181,8 +181,8 @@ def save_outputs(rows, df, outdir):
             pct = 100 * cm[i, j] / cm[i].sum() if cm[i].sum() else 0
             ax.text(j, i, f"{cm[i, j]}\n({pct:.0f}% of row)", ha="center", va="center", fontsize=10,
                     color="white" if cm[i, j] > cm.max() * 0.6 else "black")
-    ax.set_xticks([0, 1]); ax.set_xticklabels(["not-distress", "distress"])
-    ax.set_yticks([0, 1]); ax.set_yticklabels(["not-distress", "distress"])
+    ax.set_xticks([0, 1]); ax.set_xticklabels(["Positive", "Negative or mixed"])
+    ax.set_yticks([0, 1]); ax.set_yticklabels(["Positive", "Negative or mixed"])
     ax.set_xlabel("Predicted"); ax.set_ylabel("Actual"); ax.set_title("Confusion matrix (test set, v4)")
     fig.tight_layout(); fig.savefig(outdir / "confusion_matrix_v4.png"); plt.close(fig)
     # ROC curves
