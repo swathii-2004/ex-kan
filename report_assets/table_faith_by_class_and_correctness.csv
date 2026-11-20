@@ -1,0 +1,5 @@
+subset,n,LIME,SHAP
+Predicted Positive,543,0.655,0.534
+Predicted Negative,357,0.54,0.392
+Prediction correct,776,0.612,0.48
+Prediction wrong,124,0.591,0.464

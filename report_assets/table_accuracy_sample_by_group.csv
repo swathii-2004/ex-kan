@@ -1,0 +1,4 @@
+bucket,n,accuracy on this sample
+low,300,0.887
+medium,300,0.85
+high,300,0.85
