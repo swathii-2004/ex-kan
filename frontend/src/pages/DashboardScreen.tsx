@@ -58,12 +58,14 @@ export function DashboardScreen() {
 
           <div className="key-finding">
             <h3>Key Finding</h3>
-            <p className="key-finding__source">From the length-adjusted robustness analysis (v4)</p>
+            <p className="key-finding__source">From the sensitivity analyses on 900 sentences (model v4)</p>
             <p>
-              Mean faithfulness is lowest for the Medium bucket, but the gap shrinks to
-              about zero after adjusting for sentence length. Faithfulness falls as
-              sentences get longer in every bucket. We cannot distinguish code-mixing
-              effects from length effects with this sample.
+              Mean faithfulness looks lowest for the Medium group, but this is mostly a
+              side effect of how the test works: very short sentences get higher scores
+              because the test covers a larger share of them, and the Medium group has
+              more Negative predictions, which are explained less faithfully. After
+              adjusting for sentence length, the part of the sentence tested and the
+              predicted class, no clear effect of code-mixing was found.
             </p>
           </div>
         </>
