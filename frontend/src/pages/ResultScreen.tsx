@@ -147,35 +147,12 @@ export function ResultScreen() {
         <p className="not-saved-note">Not saved to history (database unreachable)</p>
       )}
 
-      <div className="result-grid">
-        <div className="card prediction-card">
-          <h3 style={{ fontSize: '1rem', marginBottom: '0.5rem' }}>Sentiment prediction</h3>
+      <div className="card prediction-card">
+        <h3 style={{ fontSize: '1rem', marginBottom: '0.5rem' }}>Sentiment prediction</h3>
+        <div className="prediction-card__row">
           <CodeMixBadge bucket={predict.code_mix_bucket} effectiveScore={predict.effective_score} />
           <span className={`prediction-label ${labelClass}`}>{predictionLabel}</span>
           <span className="confidence-line">confidence {(predict.confidence * 100).toFixed(1)}%</span>
-        </div>
-
-        <div className="card">
-          <h3 style={{ fontSize: '1rem', marginBottom: '0.5rem' }}>Explanation reliability</h3>
-          <OverallReliability
-            limeScore={explain.lime_faithfulness_score}
-            shapScore={explain.shap_faithfulness_score}
-          />
-          <FaithfulnessGauge
-            limeScore={explain.lime_faithfulness_score}
-            shapScore={explain.shap_faithfulness_score}
-          />
-          <p style={{ fontSize: '0.85rem', color: 'var(--ink-soft)', marginTop: '1rem' }}>
-            Computed live for this sentence via deletion/insertion testing — not the
-            aggregate bucket average shown on the Dashboard.
-          </p>
-          <div className="gauge-notes">
-            <p>This describes the explanation, not whether the prediction is correct.</p>
-            <p>
-              How measured: the highlighted words were removed, then kept alone, and the
-              change in the prediction was measured.
-            </p>
-          </div>
         </div>
       </div>
 
@@ -233,7 +210,7 @@ export function ResultScreen() {
       </div>
 
       {showDetails && (
-        <div className="explanation-grid">
+        <div className="word-scores-grid">
           <div className="card explanation-card">
             <strong style={{ fontSize: '0.85rem', color: 'var(--ink-soft)' }}>SHAP word scores</strong>
             <WordScoreList words={explain.shap_top_words} scores={explain.shap_scores} />
@@ -245,6 +222,35 @@ export function ResultScreen() {
           </div>
         </div>
       )}
+
+      <div className="card explanation-reliability-card">
+        <h3 style={{ fontSize: '1rem', marginBottom: '0.5rem' }}>Explanation reliability</h3>
+        <div className="explanation-reliability__layout">
+          <div className="explanation-reliability__gauge">
+            <FaithfulnessGauge
+              limeScore={explain.lime_faithfulness_score}
+              shapScore={explain.shap_faithfulness_score}
+            />
+          </div>
+          <div className="explanation-reliability__text">
+            <OverallReliability
+              limeScore={explain.lime_faithfulness_score}
+              shapScore={explain.shap_faithfulness_score}
+            />
+            <p style={{ fontSize: '0.85rem', color: 'var(--ink-soft)' }}>
+              Computed live for this sentence via deletion/insertion testing — not the
+              aggregate bucket average shown on the Dashboard.
+            </p>
+            <div className="gauge-notes">
+              <p>This describes the explanation, not whether the prediction is correct.</p>
+              <p>
+                How measured: the highlighted words were removed, then kept alone, and the
+                change in the prediction was measured.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   )
 }
