@@ -28,7 +28,17 @@ def _make_client(**kwargs) -> MongoClient | None:
         return None
 
 
-client = _make_client()
+# Short timeouts on every phase of a Mongo operation (server selection, TCP connect,
+# and the socket read/write itself) so a down/unreachable database fails fast (a few
+# seconds) instead of hanging on the driver's much longer defaults (30s / 20s / 20s
+# respectively). Applied to both clients below so /db-check fails fast too.
+SHORT_TIMEOUT_MS = 3000
+
+client = _make_client(
+    serverSelectionTimeoutMS=SHORT_TIMEOUT_MS,
+    connectTimeoutMS=SHORT_TIMEOUT_MS,
+    socketTimeoutMS=SHORT_TIMEOUT_MS,
+)
 
 
 def get_db() -> Database:
@@ -37,17 +47,13 @@ def get_db() -> Database:
     return client[MONGODB_DB_NAME]
 
 
-# Separate client for the history feature, with short timeouts on every phase of a
-# Mongo operation (server selection, TCP connect, and the socket read/write itself) so
-# a down/unreachable database fails fast (a few seconds) instead of making /explain or
-# /history hang on the driver's much longer defaults (30s / 20s / 20s respectively).
-# Kept independent of `client` above so this never changes the behavior of /db-check
-# or any existing endpoint.
-HISTORY_SERVER_SELECTION_TIMEOUT_MS = 3000
+# Separate client for the history feature. Kept independent of `client` above (own
+# MongoClient instance) so a problem specific to one never affects the other, even
+# though they currently share the same short timeouts.
 _history_client = _make_client(
-    serverSelectionTimeoutMS=HISTORY_SERVER_SELECTION_TIMEOUT_MS,
-    connectTimeoutMS=HISTORY_SERVER_SELECTION_TIMEOUT_MS,
-    socketTimeoutMS=HISTORY_SERVER_SELECTION_TIMEOUT_MS,
+    serverSelectionTimeoutMS=SHORT_TIMEOUT_MS,
+    connectTimeoutMS=SHORT_TIMEOUT_MS,
+    socketTimeoutMS=SHORT_TIMEOUT_MS,
 )
 
 
