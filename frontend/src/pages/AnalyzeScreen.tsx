@@ -31,6 +31,7 @@ export function AnalyzeScreen() {
   return (
     <div className="page">
       <div className="page-header">
+        <h1>Evaluating SHAP and LIME for Kannada-English Sentiment</h1>
         <h1>Analyze</h1>
         <p>
           Type a Kannada-English sentence to test how trustworthy the explanation of the
